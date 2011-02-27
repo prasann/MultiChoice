@@ -1,0 +1,6 @@
+package com.prasans.utils;
+
+public class AppConstants {
+    public static final String TEST_NAME = "TestName";
+    public static final String COUNT = "count";
+}
