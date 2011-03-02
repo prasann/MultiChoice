@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import com.prasans.R;
 
-public class HomeScreenActivity extends Activity {
+public class HomeScreen extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -15,7 +15,7 @@ public class HomeScreenActivity extends Activity {
         Button button = (Button) findViewById(R.id.createBtn);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), CreateTestActivity.class);
+                Intent intent = new Intent(view.getContext(), CreateTest.class);
                 startActivityForResult(intent, RESULT_FIRST_USER);
             }
         });

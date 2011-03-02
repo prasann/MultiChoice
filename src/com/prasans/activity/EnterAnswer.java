@@ -16,7 +16,7 @@ import static android.widget.LinearLayout.VERTICAL;
 import static com.prasans.utils.AppConstants.COUNT;
 import static com.prasans.utils.AppConstants.TEST_NAME;
 
-public class EnterAnswerActivity extends Activity {
+public class EnterAnswer extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +52,7 @@ public class EnterAnswerActivity extends Activity {
 
     private TableRow createLeftOverCells(int individualCells, int count) {
         TableRow tableRow = new TableRow(this);
-        tableRow.setPadding(0,10,0,0);
+        tableRow.setPadding(0, 10, 0, 0);
         int rowId = count - individualCells;
         for (int i = 1; i <= individualCells; i++) {
             tableRow.addView(editText(String.valueOf(rowId + i)));
@@ -62,7 +62,7 @@ public class EnterAnswerActivity extends Activity {
 
     private TableRow createOneFullRow(int rowId) {
         TableRow tableRow = new TableRow(this);
-        tableRow.setPadding(0,10,0,0);
+        tableRow.setPadding(0, 10, 0, 0);
         for (int i = 1; i <= 5; i++) {
             tableRow.addView(editText(String.valueOf(rowId + i)));
         }

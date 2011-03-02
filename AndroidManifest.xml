@@ -3,13 +3,24 @@
           package="com.prasans">
     <application android:icon="@drawable/icon" android:label="multichoice"
                  android:theme="@style/MyTheme">
-        <activity android:name=".activity.HomeScreenActivity">
+        <activity android:name=".activity.HomeScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".activity.CreateTestActivity"/>
-        <activity android:name=".activity.EnterAnswerActivity"/>
+        <activity android:name=".activity.CreateTest"/>
+        <activity android:name=".activity.EnterAnswer"/>
+        <activity android:name=".activity.SendSMS"/>
+        <activity android:name=".activity.ReceiveSMS"/>
+        <receiver android:name=".activity.SMSMonitor">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
+            </intent-filter>
+        </receiver>
     </application>
+
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
 </manifest>

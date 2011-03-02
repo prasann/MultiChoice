@@ -13,7 +13,7 @@ import static com.prasans.utils.AppConstants.COUNT;
 import static com.prasans.utils.AppConstants.TEST_NAME;
 import static java.lang.Integer.parseInt;
 
-public class CreateTestActivity extends Activity {
+public class CreateTest extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +32,7 @@ public class CreateTestActivity extends Activity {
                     displayAlert();
                     return;
                 }
-                Intent intent = new Intent(view.getContext(), EnterAnswerActivity.class);
+                Intent intent = new Intent(view.getContext(), EnterAnswer.class);
                 Bundle bundle = new Bundle();
                 bundle.putString(TEST_NAME, testName);
                 bundle.putInt(COUNT, parseInt(quesCount));
