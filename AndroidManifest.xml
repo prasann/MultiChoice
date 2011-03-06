@@ -12,7 +12,7 @@
         <activity android:name=".activity.CreateTest"/>
         <activity android:name=".activity.EnterAnswer"/>
         <activity android:name=".activity.SendSMS"/>
-        <activity android:name=".activity.ReceiveSMS"/>
+        <activity android:name=".activity.EvaluateReceivedText"/>
         <receiver android:name=".activity.SMSMonitor">
             <intent-filter>
                 <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
