@@ -15,7 +15,7 @@ public class HomeScreen extends Activity {
         Button button = (Button) findViewById(R.id.createBtn);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), CreateTest.class);
+                Intent intent = new Intent(view.getContext(), TestCreation.class);
                 startActivityForResult(intent, RESULT_FIRST_USER);
             }
         });

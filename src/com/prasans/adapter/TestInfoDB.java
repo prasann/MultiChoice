@@ -17,11 +17,11 @@ public class TestInfoDB {
     public static final String KEY_COUNT = "count";
     public static final String KEY_ANSWERS = "answers";
 
-    private static final String DATABASE_CREATE = "create table aircraft (_id integer primary key autoincrement,"
-            + "name text not null, code text not null, count integer not null, answers text not null);";
+    private static final String DATABASE_CREATE = "create table contest_info (_id integer primary key autoincrement,"
+            + "name text not null, code text unique not null, count integer not null, answers text not null);";
 
-    private static final String DATABASE_NAME = "multichoice";
-    private static final String DATABASE_TABLE = "test_info";
+    private static final String DATABASE_NAME = "multi_choice";
+    private static final String DATABASE_TABLE = "contest_info";
     private static final int DATABASE_VERSION = 3;
 
     public static final String TAG = "TestDbAdapter";
@@ -45,9 +45,7 @@ public class TestInfoDB {
             Log.w(TAG, "Upgrading database from version " + oldVersion + " to "
                     + newVersion + ", which will destroy all old data");
             db.execSQL("DROP TABLE IF EXISTS "+DATABASE_TABLE);
-            onCreate(db);
         }
-
     }
 
     public TestInfoDB open() throws SQLiteException {

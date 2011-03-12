@@ -18,12 +18,13 @@ public final class R {
         public static final int icon=0x7f020000;
     }
     public static final class id {
-        public static final int createBtn=0x7f070005;
-        public static final int quesBtn=0x7f070002;
-        public static final int quesCountDisplay=0x7f070004;
-        public static final int questCount=0x7f070001;
+        public static final int createBtn=0x7f070006;
+        public static final int quesBtn=0x7f070003;
+        public static final int quesCountDisplay=0x7f070005;
+        public static final int questCount=0x7f070002;
+        public static final int testCode=0x7f070001;
         public static final int testName=0x7f070000;
-        public static final int testNameDisplay=0x7f070003;
+        public static final int testNameDisplay=0x7f070004;
     }
     public static final class layout {
         public static final int create_test=0x7f030000;
@@ -35,6 +36,7 @@ public final class R {
         public static final int hello=0x7f050000;
         public static final int quesBtnLabel=0x7f050004;
         public static final int questCountLbl=0x7f050003;
+        public static final int testCodeLbl=0x7f050005;
         public static final int testNameLbl=0x7f050002;
     }
     public static final class style {

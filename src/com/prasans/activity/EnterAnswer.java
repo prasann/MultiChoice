@@ -2,26 +2,33 @@ package com.prasans.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
+import com.prasans.adapter.TestInfoDB;
 
 import static android.view.ViewGroup.LayoutParams.FILL_PARENT;
 import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
 import static android.widget.LinearLayout.VERTICAL;
 import static com.prasans.utils.AppConstants.COUNT;
+import static com.prasans.utils.AppConstants.TEST_CODE;
 import static com.prasans.utils.AppConstants.TEST_NAME;
 
 public class EnterAnswer extends Activity {
+    private TestInfoDB dbAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Bundle bundle = getIntent().getExtras();
+        dbAdapter = new TestInfoDB(this);
+        dbAdapter.open();
         LinearLayout linearLayout = new LinearLayout(this);
         ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(FILL_PARENT, WRAP_CONTENT);
         linearLayout.setLayoutParams(params);
@@ -32,10 +39,31 @@ public class EnterAnswer extends Activity {
         int count = bundle.getInt(COUNT);
         linearLayout.addView(textView("No. Of Questions: " + count));
         linearLayout.addView(tableLayout(count));
+        linearLayout.addView(submitButton());
         ScrollView scrollView = new ScrollView(this);
         scrollView.addView(linearLayout);
         setContentView(scrollView);
     }
+
+    private View.OnClickListener submitListener = new View.OnClickListener() {
+        public void onClick(View view) {
+            Bundle bundle = getIntent().getExtras();
+            String testName = bundle.getString(TEST_NAME);
+            String testCode = bundle.getString(TEST_CODE);
+            int count = bundle.getInt(COUNT);
+            dbAdapter.createTestEntry(testName, testCode, count, "Answers");
+            dbAdapter.close();
+        }
+    };
+
+    private Button submitButton() {
+        Button button = new Button(this);
+        button.setHeight(WRAP_CONTENT);
+        button.setText("Submit");
+        button.setOnClickListener(submitListener);
+        return button;
+    }
+
 
     private TableLayout tableLayout(int count) {
         TableLayout tableLayout = new TableLayout(this);

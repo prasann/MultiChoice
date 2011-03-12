@@ -10,10 +10,11 @@ import android.widget.EditText;
 import com.prasans.R;
 
 import static com.prasans.utils.AppConstants.COUNT;
+import static com.prasans.utils.AppConstants.TEST_CODE;
 import static com.prasans.utils.AppConstants.TEST_NAME;
 import static java.lang.Integer.parseInt;
 
-public class CreateTest extends Activity {
+public class TestCreation extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +29,7 @@ public class CreateTest extends Activity {
             public void onClick(View view) {
                 String quesCount = getValueFrom(R.id.questCount);
                 String testName = getValueFrom(R.id.testName);
+                String testCode = getValueFrom(R.id.testCode);
                 if (checkForValidQuesCount(quesCount)) {
                     displayAlert();
                     return;
@@ -36,6 +38,7 @@ public class CreateTest extends Activity {
                 Bundle bundle = new Bundle();
                 bundle.putString(TEST_NAME, testName);
                 bundle.putInt(COUNT, parseInt(quesCount));
+                bundle.putString(TEST_CODE, testCode);
                 intent.putExtras(bundle);
                 startActivityForResult(intent, RESULT_FIRST_USER);
             }

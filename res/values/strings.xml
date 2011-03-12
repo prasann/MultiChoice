@@ -5,4 +5,5 @@
     <string name="testNameLbl">Test Name</string>
     <string name="questCountLbl">No. Of Questions</string>
     <string name="quesBtnLabel">OK</string>
+    <string name="testCodeLbl">Test Code</string>
 </resources>
