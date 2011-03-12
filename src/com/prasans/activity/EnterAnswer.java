@@ -28,7 +28,7 @@ public class EnterAnswer extends Activity {
         super.onCreate(savedInstanceState);
         Bundle bundle = getIntent().getExtras();
         dbAdapter = new TestInfoDB(this);
-        dbAdapter.open();
+
         LinearLayout linearLayout = new LinearLayout(this);
         ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(FILL_PARENT, WRAP_CONTENT);
         linearLayout.setLayoutParams(params);
@@ -51,6 +51,7 @@ public class EnterAnswer extends Activity {
             String testName = bundle.getString(TEST_NAME);
             String testCode = bundle.getString(TEST_CODE);
             int count = bundle.getInt(COUNT);
+            dbAdapter.open();
             dbAdapter.createTestEntry(testName, testCode, count, "Answers");
             dbAdapter.close();
         }
