@@ -1,6 +1,8 @@
 package com.prasans.activity;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,15 +15,20 @@ import android.widget.TableRow;
 import android.widget.TextView;
 import com.prasans.adapter.TestInfoDB;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static android.view.ViewGroup.LayoutParams.FILL_PARENT;
 import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
 import static android.widget.LinearLayout.VERTICAL;
+import static android.widget.Toast.makeText;
 import static com.prasans.utils.AppConstants.COUNT;
 import static com.prasans.utils.AppConstants.TEST_CODE;
 import static com.prasans.utils.AppConstants.TEST_NAME;
 
 public class EnterAnswer extends Activity {
     private TestInfoDB dbAdapter;
+    private List<EditText> editTextList = new ArrayList<EditText>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,15 +54,33 @@ public class EnterAnswer extends Activity {
 
     private View.OnClickListener submitListener = new View.OnClickListener() {
         public void onClick(View view) {
+            String answers = buildAnswers();
+            if (answers.length() != editTextList.size()) {
+                new AlertDialog.Builder(EnterAnswer.this).setTitle("Error")
+                        .setMessage("Need to fill all answers")
+                        .setNeutralButton("Close", null).show();
+                return;
+            }
             Bundle bundle = getIntent().getExtras();
             String testName = bundle.getString(TEST_NAME);
             String testCode = bundle.getString(TEST_CODE);
             int count = bundle.getInt(COUNT);
             dbAdapter.open();
-            dbAdapter.createTestEntry(testName, testCode, count, "Answers");
+            dbAdapter.createTestEntry(testName, testCode, count, answers);
             dbAdapter.close();
+            makeText(view.getContext(),"Test Information Stored successfully",10);
+            Intent intent = new Intent(view.getContext(), HomeScreen.class);
+            startActivityForResult(intent, RESULT_FIRST_USER);
         }
     };
+
+    private String buildAnswers() {
+        StringBuilder answerBuilder = new StringBuilder();
+        for (EditText editText : editTextList) {
+            answerBuilder.append(editText.getText().toString());
+        }
+        return answerBuilder.toString();
+    }
 
     private Button submitButton() {
         Button button = new Button(this);
@@ -106,7 +131,9 @@ public class EnterAnswer extends Activity {
 
     private EditText editText(String hint) {
         EditText editText = new EditText(this);
+        editText.setId(Integer.valueOf(hint));
         editText.setHint(hint);
+        editTextList.add(editText);
         return editText;
     }
 }

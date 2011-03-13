@@ -55,17 +55,16 @@ public class TestCreation extends Activity {
 
     private boolean checkForTestCodeExistence(String testCode) {
         if (testCode == null || testCode.equals("")) {
-            return false;
+            return true;
         }
         dbAdapter.open();
         Cursor cursor = dbAdapter.fetchAllTests();
-        cursor.moveToFirst();
-        while (!cursor.isAfterLast()) {
+        for(cursor.moveToFirst();!cursor.isAfterLast();cursor.moveToNext()){
             if (testCode.equals(cursor.getString(2))) {
-                return false;
+                return true;
             }
         }
-        return true;
+        return false;
     }
 
     private String getValueFrom(int questCount) {
