@@ -2,6 +2,7 @@ package com.prasans.activity;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -21,7 +22,6 @@ import java.util.List;
 import static android.view.ViewGroup.LayoutParams.FILL_PARENT;
 import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
 import static android.widget.LinearLayout.VERTICAL;
-import static android.widget.Toast.makeText;
 import static com.prasans.utils.AppConstants.COUNT;
 import static com.prasans.utils.AppConstants.TEST_CODE;
 import static com.prasans.utils.AppConstants.TEST_NAME;
@@ -68,9 +68,18 @@ public class EnterAnswer extends Activity {
             dbAdapter.open();
             dbAdapter.createTestEntry(testName, testCode, count, answers);
             dbAdapter.close();
-            makeText(view.getContext(),"Test Information Stored successfully",10);
-            Intent intent = new Intent(view.getContext(), HomeScreen.class);
-            startActivityForResult(intent, RESULT_FIRST_USER);
+            DialogInterface.OnClickListener onclickListener = new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    Intent intent = new Intent(EnterAnswer.this, HomeScreen.class);
+                    startActivityForResult(intent, RESULT_FIRST_USER);
+                }
+            };
+            new AlertDialog.Builder(EnterAnswer.this).setTitle("Success")
+                    .setMessage("All the details stored successfully")
+                    .setIcon(RESULT_OK)
+                    .setNeutralButton("Close", onclickListener)
+                    .show();
+
         }
     };
 
