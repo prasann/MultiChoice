@@ -24,6 +24,7 @@ public class SMSMonitor extends BroadcastReceiver {
                 Toast.makeText(context, "You have received: " + messages.length +
                         "SMS from " + messages[i].getDisplayOriginatingAddress()
                         , Toast.LENGTH_LONG).show();
+                bundle.putString("message",messages[i].getDisplayMessageBody());
                 bundle.putString("phoneNumber",messages[i].getDisplayOriginatingAddress());
             }
             Log.d("MySMSMonitor", "SMS Message Received.");
@@ -31,7 +32,7 @@ public class SMSMonitor extends BroadcastReceiver {
             Intent callIntent = new Intent(Intent.ACTION_CALL);
             callIntent.putExtras(bundle);
             callIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            callIntent.setClass(context, SendSMS.class);
+            callIntent.setClass(context, EvaluateReceivedText.class);
             context.startActivity(callIntent);
         }
     }
