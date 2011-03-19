@@ -8,13 +8,13 @@ import com.prasans.R;
 import com.prasans.adapter.TestInfoDB;
 
 public class EvaluateReceivedText extends Activity {
-    private TestInfoDB dbAdapter;
+    private TestInfoDB testInfoDB;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home);
-        dbAdapter = new TestInfoDB(this);
+        testInfoDB = new TestInfoDB(this);
         Bundle bundle = getIntent().getExtras();
         String message = bundle.getString("message");
         String phoneNumber = bundle.getString("phoneNumber");
@@ -56,14 +56,12 @@ public class EvaluateReceivedText extends Activity {
     }
 
     private String fetchAnswerFromDb(String testCode) {
-        dbAdapter.open();
-        Cursor cursor = dbAdapter.fetchAllTests();
+        Cursor cursor = testInfoDB.fetchAllTests();
         for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
             if (testCode.equals(cursor.getString(2))) {
                 return cursor.getString(4);
             }
         }
-        dbAdapter.close();
         return null;
     }
 

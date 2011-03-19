@@ -1,7 +1,6 @@
 package com.prasans.activity;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -14,10 +13,11 @@ import com.prasans.adapter.TestInfoDB;
 import static com.prasans.utils.AppConstants.COUNT;
 import static com.prasans.utils.AppConstants.TEST_CODE;
 import static com.prasans.utils.AppConstants.TEST_NAME;
+import static com.prasans.utils.Commons.displayAlert;
 import static java.lang.Integer.parseInt;
 
-public class TestCreation extends Activity {
-    private TestInfoDB dbAdapter;
+public class TestInfoEntry extends Activity {
+    private TestInfoDB testInfoDB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +25,7 @@ public class TestCreation extends Activity {
         setContentView(R.layout.create_test);
         Button button = (Button) findViewById(R.id.quesBtn);
         button.setOnClickListener(buttonListener());
-        dbAdapter = new TestInfoDB(this);
+        testInfoDB = new TestInfoDB(this);
     }
 
     private View.OnClickListener buttonListener() {
@@ -34,31 +34,39 @@ public class TestCreation extends Activity {
                 String quesCount = getValueFrom(R.id.questCount);
                 String testName = getValueFrom(R.id.testName);
                 String testCode = getValueFrom(R.id.testCode);
-                if (checkForValidQuesCount(quesCount)) {
-                    displayAlert("Invalid Question Count");
-                    return;
-                }
-                if (checkForTestCodeExistence(testCode)) {
-                    displayAlert("Test Code already exists");
-                    return;
-                }
-                Intent intent = new Intent(view.getContext(), EnterAnswer.class);
-                Bundle bundle = new Bundle();
-                bundle.putString(TEST_NAME, testName);
-                bundle.putInt(COUNT, parseInt(quesCount));
-                bundle.putString(TEST_CODE, testCode);
-                intent.putExtras(bundle);
+                if (checkForValidations(quesCount, testCode)) return;
+                Intent intent = new Intent(view.getContext(), AnswerEntry.class);
+                createBundleToPassUpon(quesCount, testName, testCode, intent);
                 startActivityForResult(intent, RESULT_FIRST_USER);
             }
         };
+    }
+
+    private boolean checkForValidations(String quesCount, String testCode) {
+        if (checkForValidQuesCount(quesCount)) {
+            displayAlert(this, "Error", "Invalid Question Count", null);
+            return true;
+        }
+        if (checkForTestCodeExistence(testCode)) {
+            displayAlert(this, "Error", "Test Code already exists", null);
+            return true;
+        }
+        return false;
+    }
+
+    private void createBundleToPassUpon(String quesCount, String testName, String testCode, Intent intent) {
+        Bundle bundle = new Bundle();
+        bundle.putString(TEST_NAME, testName);
+        bundle.putInt(COUNT, parseInt(quesCount));
+        bundle.putString(TEST_CODE, testCode);
+        intent.putExtras(bundle);
     }
 
     private boolean checkForTestCodeExistence(String testCode) {
         if (testCode == null || testCode.equals("")) {
             return true;
         }
-        dbAdapter.open();
-        Cursor cursor = dbAdapter.fetchAllTests();
+        Cursor cursor = testInfoDB.fetchAllTests();
         for(cursor.moveToFirst();!cursor.isAfterLast();cursor.moveToNext()){
             if (testCode.equals(cursor.getString(2))) {
                 return true;
@@ -70,12 +78,6 @@ public class TestCreation extends Activity {
     private String getValueFrom(int questCount) {
         EditText textBox = (EditText) findViewById(questCount);
         return textBox.getText().toString();
-    }
-
-    private void displayAlert(String errorMessage) {
-        new AlertDialog.Builder(this).setTitle("Error")
-                .setMessage(errorMessage)
-                .setNeutralButton("Close", null).show();
     }
 
     private boolean checkForValidQuesCount(String quesCount) {

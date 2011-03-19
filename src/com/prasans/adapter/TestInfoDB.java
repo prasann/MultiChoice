@@ -67,13 +67,16 @@ public class TestInfoDB {
     }
 
     public long createTestEntry(String name, String code, int count, String answers) {
+        this.open();
         ContentValues initialValues = new ContentValues();
         initialValues.put(KEY_NAME, name);
         initialValues.put(KEY_CODE, code);
         initialValues.put(KEY_COUNT, count);
         initialValues.put(KEY_ANSWERS, answers);
+        long returnCode = mDb.insert(DATABASE_TABLE, null, initialValues);
 
-        return mDb.insert(DATABASE_TABLE, null, initialValues);
+        this.close();
+        return returnCode;
     }
 
     public int updateEntry(long _rowIndex, String name) {
@@ -92,7 +95,12 @@ public class TestInfoDB {
     }
 
     public Cursor fetchAllTests() {
-        return mDb.query(DATABASE_TABLE, new String[]{KEY_ROWID, KEY_NAME,KEY_CODE,KEY_COUNT,KEY_ANSWERS}, null, null, null, null, null);
+        this.open();
+        Cursor cursor = mDb.query(DATABASE_TABLE,
+                new String[]{KEY_ROWID, KEY_NAME, KEY_CODE, KEY_COUNT, KEY_ANSWERS},
+                null, null, null, null, null);
+        this.close();
+        return cursor;
     }
 
 }

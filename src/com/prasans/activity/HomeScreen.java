@@ -13,11 +13,15 @@ public class HomeScreen extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home);
         Button button = (Button) findViewById(R.id.createBtn);
-        button.setOnClickListener(new View.OnClickListener() {
+        button.setOnClickListener(createTestBtnClk());
+    }
+
+    private View.OnClickListener createTestBtnClk() {
+        return new View.OnClickListener() {
             public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), TestCreation.class);
+                Intent intent = new Intent(view.getContext(), TestInfoEntry.class);
                 startActivityForResult(intent, RESULT_FIRST_USER);
             }
-        });
+        };
     }
 }

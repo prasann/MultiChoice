@@ -9,8 +9,8 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".activity.TestCreation"/>
-        <activity android:name=".activity.EnterAnswer"/>
+        <activity android:name=".activity.TestInfoEntry"/>
+        <activity android:name=".activity.AnswerEntry"/>
         <activity android:name=".activity.SendSMS"/>
         <activity android:name=".activity.EvaluateReceivedText"/>
         <receiver android:name=".activity.SMSMonitor">

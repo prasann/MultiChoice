@@ -1,7 +1,6 @@
 package com.prasans.activity;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -25,63 +24,66 @@ import static android.widget.LinearLayout.VERTICAL;
 import static com.prasans.utils.AppConstants.COUNT;
 import static com.prasans.utils.AppConstants.TEST_CODE;
 import static com.prasans.utils.AppConstants.TEST_NAME;
+import static com.prasans.utils.Commons.displayAlert;
 
-public class EnterAnswer extends Activity {
-    private TestInfoDB dbAdapter;
+public class AnswerEntry extends Activity {
+    private TestInfoDB testInfoDB;
     private List<EditText> editTextList = new ArrayList<EditText>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Bundle bundle = getIntent().getExtras();
-        dbAdapter = new TestInfoDB(this);
+        testInfoDB = new TestInfoDB(this);
 
         LinearLayout linearLayout = new LinearLayout(this);
         ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(FILL_PARENT, WRAP_CONTENT);
         linearLayout.setLayoutParams(params);
-
         linearLayout.setOrientation(VERTICAL);
-        linearLayout.addView(textView("Enter the Answers for the Questions"));
-        linearLayout.addView(textView("Test Name :" + bundle.getString(TEST_NAME)));
+
+        addStaticFieldsAtTop(bundle, linearLayout);
+
         int count = bundle.getInt(COUNT);
-        linearLayout.addView(textView("No. Of Questions: " + count));
+
         linearLayout.addView(tableLayout(count));
         linearLayout.addView(submitButton());
+
         ScrollView scrollView = new ScrollView(this);
         scrollView.addView(linearLayout);
         setContentView(scrollView);
+    }
+
+    private void addStaticFieldsAtTop(Bundle bundle, LinearLayout linearLayout) {
+        linearLayout.addView(textView("Enter the Answers for the Questions"));
+        linearLayout.addView(textView("Test Name :" + bundle.getString(TEST_NAME)));
+        linearLayout.addView(textView("Test Code :" + bundle.getString(TEST_CODE)));
+        linearLayout.addView(textView("No. Of Questions: " + bundle.getInt(COUNT)));
     }
 
     private View.OnClickListener submitListener = new View.OnClickListener() {
         public void onClick(View view) {
             String answers = buildAnswers();
             if (answers.length() != editTextList.size()) {
-                new AlertDialog.Builder(EnterAnswer.this).setTitle("Error")
-                        .setMessage("Need to fill all answers")
-                        .setNeutralButton("Close", null).show();
+                displayAlert(AnswerEntry.this, "Error", "Need to fill all answers", null);
                 return;
             }
             Bundle bundle = getIntent().getExtras();
             String testName = bundle.getString(TEST_NAME);
             String testCode = bundle.getString(TEST_CODE);
             int count = bundle.getInt(COUNT);
-            dbAdapter.open();
-            dbAdapter.createTestEntry(testName, testCode, count, answers);
-            dbAdapter.close();
-            DialogInterface.OnClickListener onclickListener = new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialogInterface, int i) {
-                    Intent intent = new Intent(EnterAnswer.this, HomeScreen.class);
-                    startActivityForResult(intent, RESULT_FIRST_USER);
-                }
-            };
-            new AlertDialog.Builder(EnterAnswer.this).setTitle("Success")
-                    .setMessage("All the details stored successfully")
-                    .setIcon(RESULT_OK)
-                    .setNeutralButton("Close", onclickListener)
-                    .show();
-
+            testInfoDB.createTestEntry(testName, testCode, count, answers);
+            displayAlert(AnswerEntry.this, "Success", "All the details stored successfully", proceedToHomeScreen());
         }
     };
+
+    private DialogInterface.OnClickListener proceedToHomeScreen() {
+        return new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Intent intent = new Intent(AnswerEntry.this, HomeScreen.class);
+                startActivityForResult(intent, RESULT_FIRST_USER);
+            }
+        };
+    }
 
     private String buildAnswers() {
         StringBuilder answerBuilder = new StringBuilder();
