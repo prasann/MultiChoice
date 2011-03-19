@@ -7,6 +7,9 @@ import android.os.Bundle;
 import com.prasans.R;
 import com.prasans.adapter.TestInfoDB;
 
+import static com.prasans.adapter.TestInfoDB.ANSWERS;
+import static com.prasans.adapter.TestInfoDB.TEST_CODE;
+
 public class EvaluateReceivedText extends Activity {
     private TestInfoDB testInfoDB;
 
@@ -29,10 +32,6 @@ public class EvaluateReceivedText extends Activity {
                         .setMessage(alertMessage)
                         .setNeutralButton("Close", null).show();
         }
-    }
-
-    private String extractAnswer(String message) {
-        return message.split(" ")[1];
     }
 
     private int processAnswer(String testCode, String answers) {
@@ -58,8 +57,8 @@ public class EvaluateReceivedText extends Activity {
     private String fetchAnswerFromDb(String testCode) {
         Cursor cursor = testInfoDB.fetchAllTests();
         for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
-            if (testCode.equals(cursor.getString(2))) {
-                return cursor.getString(4);
+            if (testCode.equals(cursor.getString(cursor.getColumnIndex(TEST_CODE)))) {
+                return cursor.getString(cursor.getColumnIndex(ANSWERS));
             }
         }
         return null;
@@ -67,5 +66,9 @@ public class EvaluateReceivedText extends Activity {
 
     private String extractTestCode(String message) {
         return message.split(" ")[0];
+    }
+
+    private String extractAnswer(String message) {
+        return message.split(" ")[1];
     }
 }
