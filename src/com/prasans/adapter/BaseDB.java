@@ -8,22 +8,18 @@ import android.util.Log;
 
 public class BaseDB {
     private final String DATABASE_CREATE;
-    private final String DATABASE_NAME;
+    private final String DATABASE_NAME = "multi_choice";
     private final String DATABASE_TABLE;
-    private final int DATABASE_VERSION;
-    public final String TAG;
+    private final int DATABASE_VERSION = 3;
 
     public final Context mCtx;
     private DatabaseHelper mDbHelper;
     public SQLiteDatabase mDb;
 
-    public BaseDB(String DATABASE_CREATE, String DATABASE_NAME, String DATABASE_TABLE, int DATABASE_VERSION, String TAG, Context mCtx) {
-        this.DATABASE_CREATE = DATABASE_CREATE;
-        this.DATABASE_NAME = DATABASE_NAME;
-        this.DATABASE_TABLE = DATABASE_TABLE;
-        this.DATABASE_VERSION = DATABASE_VERSION;
-        this.TAG = TAG;
+    public BaseDB(Context mCtx, String DATABASE_TABLE, String DATABASE_CREATE) {
         this.mCtx = mCtx;
+        this.DATABASE_TABLE = DATABASE_TABLE;
+        this.DATABASE_CREATE = DATABASE_CREATE;
     }
 
     private class DatabaseHelper extends SQLiteOpenHelper {
@@ -38,7 +34,7 @@ public class BaseDB {
 
         @Override
         public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-            Log.w(TAG, "Upgrading database from version " + oldVersion + " to "
+            Log.w(DATABASE_NAME, "Upgrading database from version " + oldVersion + " to "
                     + newVersion + ", which will destroy all old data");
             db.execSQL("DROP TABLE IF EXISTS " + DATABASE_TABLE);
         }

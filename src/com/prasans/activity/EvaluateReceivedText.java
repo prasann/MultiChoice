@@ -1,10 +1,10 @@
 package com.prasans.activity;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.database.Cursor;
 import android.os.Bundle;
 import com.prasans.R;
+import com.prasans.adapter.ResultsDB;
 import com.prasans.adapter.TestInfoDB;
 
 import static com.prasans.adapter.TestInfoDB.ANSWERS;
@@ -12,34 +12,37 @@ import static com.prasans.adapter.TestInfoDB.TEST_CODE;
 
 public class EvaluateReceivedText extends Activity {
     private TestInfoDB testInfoDB;
+    private ResultsDB resultsDB;
+    private String phoneNumber;
+    private String message;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home);
         testInfoDB = new TestInfoDB(this);
+        resultsDB = new ResultsDB(this);
+
         Bundle bundle = getIntent().getExtras();
-        String message = bundle.getString("message");
-        String phoneNumber = bundle.getString("phoneNumber");
+        message = bundle.getString("message");
+        phoneNumber = bundle.getString("phoneNumber");
         String testCode = extractTestCode(message);
         String answers = extractAnswer(message);
-        int score = processAnswer(testCode, answers);
-        if (score != -1) {
-            String alertMessage = "From: " + phoneNumber +
-                    "Score : " + score;
-
-            new AlertDialog.Builder(this).setTitle("Score")
-                        .setMessage(alertMessage)
-                        .setNeutralButton("Close", null).show();
-        }
+        processAnswer(testCode, answers);
     }
 
     private int processAnswer(String testCode, String answers) {
         String answersFromDb = fetchAnswerFromDb(testCode);
         if (answersFromDb != null) {
-            return calculateScore(answers, answersFromDb);
+            int score = calculateScore(answers, answersFromDb);
+            persistScoreInDb(testCode, score, answersFromDb.length());
+            return 1;
         }
         return -1;
+    }
+
+    private long persistScoreInDb(String testCode, int score, int totalCount) {
+        return resultsDB.createTestEntry(testCode, phoneNumber, message, score, totalCount);
     }
 
     private int calculateScore(String userAnswer, String answersFromDb) {
@@ -57,7 +60,8 @@ public class EvaluateReceivedText extends Activity {
     private String fetchAnswerFromDb(String testCode) {
         Cursor cursor = testInfoDB.fetchAllTests();
         for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
-            if (testCode.equals(cursor.getString(cursor.getColumnIndex(TEST_CODE)))) {
+            if (testCode.equals(cursor.getString(cursor.getColumnIndex(TEST_CODE))) &&
+                    cursor.getInt(cursor.getColumnIndex(TestInfoDB.OPEN)) == 1) {
                 return cursor.getString(cursor.getColumnIndex(ANSWERS));
             }
         }
