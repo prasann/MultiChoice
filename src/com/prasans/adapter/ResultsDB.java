@@ -11,19 +11,17 @@ public class ResultsDB extends BaseDB {
     public static final String ANSWERS = "answers";
     public static final String SCORE = "score";
     public static final String TOTAL_COUNT = "total_count";
-
-
-    private static final String DATABASE_CREATE = "create table results_info (_id integer primary key autoincrement,"
-            + "test_code text not null, sender text not null, answers text not null, score integer not null, total_count integer not null);";
+    public static Context mCtx;
 
     private static final String DATABASE_TABLE = "results_info";
 
-    public ResultsDB(Context mCtx) {
-        super(mCtx, DATABASE_TABLE, DATABASE_CREATE);
+    public ResultsDB(Context context) {
+        super(DATABASE_TABLE);
+        mCtx = context;
     }
 
     public long createTestEntry(String testCode, String sender, String answers, int score, int totalCount) {
-        this.open();
+        this.open(mCtx);
         ContentValues initialValues = new ContentValues();
         initialValues.put(TEST_CODE, testCode);
         initialValues.put(SENDER, sender);
@@ -36,7 +34,7 @@ public class ResultsDB extends BaseDB {
     }
 
     public Cursor fetchAllResultsFor(String testCode) {
-        this.open();
+        this.open(mCtx);
         Cursor cursor = mDb.query(DATABASE_TABLE,
                 new String[]{KEY_ROWID, TEST_CODE, SENDER, ANSWERS, SCORE,TOTAL_COUNT},
         "where test_code = " + testCode, null, null, null, null);

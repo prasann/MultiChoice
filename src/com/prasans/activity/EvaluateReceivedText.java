@@ -1,6 +1,7 @@
 package com.prasans.activity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import com.prasans.R;
@@ -28,7 +29,19 @@ public class EvaluateReceivedText extends Activity {
         phoneNumber = bundle.getString("phoneNumber");
         String testCode = extractTestCode(message);
         String answers = extractAnswer(message);
-        processAnswer(testCode, answers);
+        int score = processAnswer(testCode, answers);
+        if (score != -1) {
+            sendScoreInSms(score);
+        }
+    }
+
+    private void sendScoreInSms(int score) {
+        Intent intent = new Intent(EvaluateReceivedText.this, SendSMS.class);
+        Bundle bundle = new Bundle();
+        bundle.putInt("score", score);
+        bundle.putString("phoneNumber", phoneNumber);
+        intent.putExtras(bundle);
+        startActivityForResult(intent, RESULT_FIRST_USER);
     }
 
     private int processAnswer(String testCode, String answers) {
@@ -36,7 +49,7 @@ public class EvaluateReceivedText extends Activity {
         if (answersFromDb != null) {
             int score = calculateScore(answers, answersFromDb);
             persistScoreInDb(testCode, score, answersFromDb.length());
-            return 1;
+            return score;
         }
         return -1;
     }

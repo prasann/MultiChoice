@@ -3,7 +3,7 @@ package com.prasans.activity;
 import android.app.Activity;
 import android.os.Bundle;
 import android.telephony.SmsManager;
-import android.widget.Toast;
+import android.util.Log;
 
 import static android.telephony.SmsManager.getDefault;
 
@@ -13,7 +13,8 @@ public class SendSMS extends Activity {
         super.onCreate(savedInstanceState);
         Bundle bundle = getIntent().getExtras();
         String phoneNumber = bundle.getString("phoneNumber");
-        String message = "Thanks!!";
+        int score = bundle.getInt("score");
+        String message = "You have scored " + score;
         sendSms(phoneNumber, message);
     }
 
@@ -21,11 +22,9 @@ public class SendSMS extends Activity {
         try {
             SmsManager smsManager = getDefault();
             smsManager.sendTextMessage(phoneNumber, null, message, null, null);
-            Toast.makeText(this, "SMS Sent", Toast.LENGTH_LONG).show();
+            Log.d("SendSMS", "To: " + phoneNumber + "Message : " + message);
         } catch (Exception e) {
-            Toast.makeText(this, "Failed to send SMS",
-                    Toast.LENGTH_LONG).show();
-            e.printStackTrace();
+            Log.e("Failure - SendSMS", "To: " + phoneNumber + "Message : " + message);
         }
     }
 

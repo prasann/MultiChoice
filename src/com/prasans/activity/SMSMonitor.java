@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.telephony.SmsMessage;
 import android.util.Log;
-import android.widget.Toast;
 
 public class SMSMonitor extends BroadcastReceiver {
     private static final String ACTION = "android.provider.Telephony.SMS_RECEIVED";
@@ -21,9 +20,6 @@ public class SMSMonitor extends BroadcastReceiver {
             Bundle bundle = new Bundle();
             for (int i = 0; i < pduArray.length; i++) {
                 messages[i] = SmsMessage.createFromPdu((byte[]) pduArray[i]);
-                Toast.makeText(context, "You have received: " + messages.length +
-                        "SMS from " + messages[i].getDisplayOriginatingAddress()
-                        , Toast.LENGTH_LONG).show();
                 bundle.putString("message",messages[i].getDisplayMessageBody());
                 bundle.putString("phoneNumber",messages[i].getDisplayOriginatingAddress());
             }
