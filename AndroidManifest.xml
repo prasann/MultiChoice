@@ -13,6 +13,7 @@
         <activity android:name=".activity.AnswerEntry"/>
         <activity android:name=".activity.SendSMS"/>
         <activity android:name=".activity.EvaluateReceivedText"/>
+        <activity android:name=".activity.ReportsScreen"/>
         <receiver android:name=".activity.SMSMonitor">
             <intent-filter>
                 <action android:name="android.provider.Telephony.SMS_RECEIVED"/>

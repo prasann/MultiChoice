@@ -10,4 +10,11 @@
             android:layout_marginLeft="50sp"
             android:layout_marginTop="100sp"
             android:layout_height="wrap_content"/>
+
+     <Button android:id="@+id/reportsBtn"
+            android:text="@string/reportsBtnLabel"
+            android:layout_width="200sp"
+            android:layout_marginLeft="50sp"
+            android:layout_marginTop="100sp"
+            android:layout_height="wrap_content"/>
 </LinearLayout>
