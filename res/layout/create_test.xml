@@ -34,5 +34,7 @@
                       android:layout_height="wrap_content" android:id="@+id/questCount"/>
         </TableRow>
     </TableLayout>
-    <Button android:id="@+id/quesBtn" android:text="@string/quesBtnLabel" android:layout_height="wrap_content" android:layout_width="200sp" android:layout_marginLeft="50sp"></Button>
+    <Button android:id="@+id/quesBtn" android:text="@string/quesBtnLabel"
+            android:layout_height="wrap_content" android:layout_width="200sp" 
+            android:layout_marginLeft="50sp"></Button>
 </LinearLayout>
