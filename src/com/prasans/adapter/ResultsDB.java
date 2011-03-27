@@ -37,8 +37,8 @@ public class ResultsDB extends BaseDB {
         this.open(mCtx);
         Cursor cursor = mDb.query(DATABASE_TABLE,
                 new String[]{KEY_ROWID, TEST_CODE, SENDER, ANSWERS, SCORE,TOTAL_COUNT},
-        "where test_code = " + testCode, null, null, null, null);
-        this.close();
+        "test_code = '" + testCode + "'", null, null, null, null);
+//        this.close();
         return cursor;
     }
 }

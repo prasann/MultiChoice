@@ -7,19 +7,19 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import com.prasans.R;
-import com.prasans.domain.TestInfo;
+import com.prasans.domain.ScoreInfo;
 
 import java.util.List;
 
 import static android.content.Context.LAYOUT_INFLATER_SERVICE;
 
-public class TestInfoListAdapter extends ArrayAdapter<TestInfo> {
+public class ScoreInfoListAdapter extends ArrayAdapter<ScoreInfo> {
 
 
-    private List<TestInfo> items;
+    private List<ScoreInfo> items;
     private Context myContext;
 
-    public TestInfoListAdapter(Context context, int textViewResourceId, List<TestInfo> items) {
+    public ScoreInfoListAdapter(Context context, int textViewResourceId, List<ScoreInfo> items) {
         super(context, textViewResourceId, items);
         this.items = items;
         this.myContext = context;
@@ -32,17 +32,17 @@ public class TestInfoListAdapter extends ArrayAdapter<TestInfo> {
         View view = convertView;
         if (view == null) {
             LayoutInflater vi = (LayoutInflater) myContext.getSystemService(LAYOUT_INFLATER_SERVICE);
-            view = vi.inflate(R.layout.row_test_report, null);
+            view = vi.inflate(R.layout.row_score, null);
         }
-        TestInfo testInfo = items.get(position);
-        if (testInfo != null) {
-            TextView testName = (TextView) view.findViewById(R.id.text_testName);
-            TextView testCode = (TextView) view.findViewById(R.id.text_testCode);
-            if (testCode != null) {
-                testCode.setText("TestCode: " + testInfo.getTestCode());
+        ScoreInfo scoreInfo = items.get(position);
+        if (scoreInfo != null) {
+            TextView number = (TextView) view.findViewById(R.id.row_number);
+            TextView score = (TextView) view.findViewById(R.id.row_score);
+            if (score != null) {
+                score.setText(scoreInfo.getScore());
             }
-            if (testName != null) {
-                testName.setText("TestName: " + testInfo.getTestName());
+            if (number != null) {
+                number.setText(scoreInfo.getPhoneNumber());
             }
         }
         return view;

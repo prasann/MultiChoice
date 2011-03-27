@@ -1,11 +1,11 @@
 package com.prasans.activity;
 
 import android.app.ListActivity;
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
-import android.widget.Toast;
 import com.prasans.R;
 import com.prasans.adapter.TestInfoDB;
 import com.prasans.adapter.TestInfoListAdapter;
@@ -13,6 +13,9 @@ import com.prasans.domain.TestInfo;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.prasans.utils.AppConstants.TEST_CODE;
+import static com.prasans.utils.AppConstants.TEST_NAME;
 
 public class ReportsScreen extends ListActivity {
 
@@ -25,15 +28,20 @@ public class ReportsScreen extends ListActivity {
         setContentView(R.layout.report_list);
         testInfoDB = new TestInfoDB(this);
         List<TestInfo> infoList = getTestInfo();
-        testInfoAdapter = new TestInfoListAdapter(this, R.layout.row_list, infoList);
+        testInfoAdapter = new TestInfoListAdapter(this, R.layout.row_test_report, infoList);
         this.setListAdapter(testInfoAdapter);
     }
 
     @Override
     protected void onListItemClick(ListView l, View v, int position, long id) {
         super.onListItemClick(l, v, position, id);
-        TestInfo testInfo = (TestInfo)this.getListAdapter().getItem(position);
-        Toast.makeText(this, "TestCode: "+testInfo.getTestCode(), Toast.LENGTH_LONG).show();
+        TestInfo testInfo = (TestInfo) this.getListAdapter().getItem(position);
+        Intent intent = new Intent(v.getContext(), IndividualScore.class);
+        Bundle bundle = new Bundle();
+        bundle.putString(TEST_CODE,testInfo.getTestCode());
+        bundle.putString(TEST_NAME,testInfo.getTestName());
+        intent.putExtras(bundle);
+        startActivityForResult(intent, RESULT_FIRST_USER);
     }
 
     private List<TestInfo> getTestInfo() {
