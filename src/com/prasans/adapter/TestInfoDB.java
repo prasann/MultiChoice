@@ -5,7 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.widget.Toast;
 
-public class TestInfoDB extends BaseDB{
+public class TestInfoDB extends BaseDB {
 
     public static final String KEY_ROWID = "_id";
     public static final String TEST_NAME = "test_name";
@@ -19,7 +19,7 @@ public class TestInfoDB extends BaseDB{
 
     public TestInfoDB(Context ctx) {
         super(DATABASE_TABLE);
-        mCtx =ctx;
+        mCtx = ctx;
     }
 
     public long createTestEntry(String name, String code, int count, String answers) {
@@ -29,7 +29,7 @@ public class TestInfoDB extends BaseDB{
         initialValues.put(TEST_CODE, code);
         initialValues.put(QUES_COUNT, count);
         initialValues.put(ANSWERS, answers);
-        initialValues.put(OPEN,true);
+        initialValues.put(OPEN, true);
         long returnCode = mDb.insert(DATABASE_TABLE, null, initialValues);
 
         this.close();
@@ -53,11 +53,16 @@ public class TestInfoDB extends BaseDB{
 
     public Cursor fetchAllTests() {
         this.open(mCtx);
-        Cursor cursor = mDb.query(DATABASE_TABLE,
+        return mDb.query(DATABASE_TABLE,
                 new String[]{KEY_ROWID, TEST_NAME, TEST_CODE, QUES_COUNT, ANSWERS, OPEN},
                 null, null, null, null, null);
-//        this.close();
-        return cursor;
+    }
+
+    public Cursor fetchInfoFor(String testCode) {
+        this.open(mCtx);
+        return mDb.query(DATABASE_TABLE,
+                new String[]{KEY_ROWID, TEST_NAME, TEST_CODE, QUES_COUNT, ANSWERS, OPEN},
+                "test_code = '" + testCode + "'", null, null, null, null);
     }
 
 }

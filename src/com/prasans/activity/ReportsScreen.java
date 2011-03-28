@@ -54,6 +54,8 @@ public class ReportsScreen extends ListActivity {
             testInfo.setStatus(cursor.getInt(cursor.getColumnIndex(TestInfoDB.OPEN)));
             testInfoList.add(testInfo);
         }
+        cursor.close();
+        testInfoDB.close();
         return testInfoList;
     }
 }

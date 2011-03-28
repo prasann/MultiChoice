@@ -9,4 +9,5 @@
     <string name="reportsBtnLabel">Reports</string>
     <string name="main_no_items">No Tests Exists</string>
     <string name="answerReceivedCount">Answers Received</string>
+    <string name="scanMessageBtnLLabel">Scan SMS</string>
 </resources>

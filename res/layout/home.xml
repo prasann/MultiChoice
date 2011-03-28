@@ -17,4 +17,11 @@
             android:layout_marginLeft="50sp"
             android:layout_marginTop="100sp"
             android:layout_height="wrap_content"/>
+
+     <Button android:id="@+id/scanMessageBtn"
+            android:text="@string/scanMessageBtnLLabel"
+            android:layout_width="200sp"
+            android:layout_marginLeft="50sp"
+            android:layout_marginTop="100sp"
+            android:layout_height="wrap_content"/>
 </LinearLayout>

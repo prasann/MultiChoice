@@ -4,12 +4,14 @@ import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.util.Log;
 import com.prasans.R;
 import com.prasans.adapter.ResultsDB;
 import com.prasans.adapter.TestInfoDB;
 
 import static com.prasans.adapter.TestInfoDB.ANSWERS;
-import static com.prasans.adapter.TestInfoDB.TEST_CODE;
+import static com.prasans.utils.AppConstants.MESSAGE;
+import static com.prasans.utils.AppConstants.PHONE_NUMBER;
 
 public class EvaluateReceivedText extends Activity {
     private TestInfoDB testInfoDB;
@@ -25,8 +27,8 @@ public class EvaluateReceivedText extends Activity {
         resultsDB = new ResultsDB(this);
 
         Bundle bundle = getIntent().getExtras();
-        message = bundle.getString("message");
-        phoneNumber = bundle.getString("phoneNumber");
+        message = bundle.getString(MESSAGE);
+        phoneNumber = bundle.getString(PHONE_NUMBER);
         String testCode = extractTestCode(message);
         String answers = extractAnswer(message);
         int score = processAnswer(testCode, answers);
@@ -39,7 +41,7 @@ public class EvaluateReceivedText extends Activity {
         Intent intent = new Intent(EvaluateReceivedText.this, SendSMS.class);
         Bundle bundle = new Bundle();
         bundle.putInt("score", score);
-        bundle.putString("phoneNumber", phoneNumber);
+        bundle.putString(PHONE_NUMBER, phoneNumber);
         intent.putExtras(bundle);
         startActivityForResult(intent, RESULT_FIRST_USER);
     }
@@ -55,6 +57,7 @@ public class EvaluateReceivedText extends Activity {
     }
 
     private long persistScoreInDb(String testCode, int score, int totalCount) {
+        Log.d("Persist", phoneNumber);
         return resultsDB.createTestEntry(testCode, phoneNumber, message, score, totalCount);
     }
 
@@ -71,13 +74,16 @@ public class EvaluateReceivedText extends Activity {
     }
 
     private String fetchAnswerFromDb(String testCode) {
-        Cursor cursor = testInfoDB.fetchAllTests();
-        for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
-            if (testCode.equals(cursor.getString(cursor.getColumnIndex(TEST_CODE))) &&
-                    cursor.getInt(cursor.getColumnIndex(TestInfoDB.OPEN)) == 1) {
-                return cursor.getString(cursor.getColumnIndex(ANSWERS));
+        Cursor cursor = testInfoDB.fetchInfoFor(testCode);
+        if (cursor.moveToFirst()) {
+            for (; !cursor.isAfterLast(); cursor.moveToNext()) {
+                if (cursor.getInt(cursor.getColumnIndex(TestInfoDB.OPEN)) == 1) {
+                    return cursor.getString(cursor.getColumnIndex(ANSWERS));
+                }
             }
         }
+        cursor.close();
+        testInfoDB.close();
         return null;
     }
 

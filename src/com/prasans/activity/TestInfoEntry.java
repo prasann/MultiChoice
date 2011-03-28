@@ -72,6 +72,8 @@ public class TestInfoEntry extends Activity {
                 return true;
             }
         }
+        cursor.close();
+        testInfoDB.close();
         return false;
     }
 
