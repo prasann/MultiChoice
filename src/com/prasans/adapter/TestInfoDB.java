@@ -63,6 +63,7 @@ public class TestInfoDB extends BaseDB {
         return mDb.query(DATABASE_TABLE,
                 new String[]{KEY_ROWID, TEST_NAME, TEST_CODE, QUES_COUNT, ANSWERS, OPEN},
                 "test_code = '" + testCode + "'", null, null, null, null);
+
     }
 
 }

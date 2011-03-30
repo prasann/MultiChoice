@@ -6,19 +6,23 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import com.prasans.adapter.ResultsDB;
 import com.prasans.utils.AppConstants;
 
 public class ScanSMS extends Activity {
     private static final Uri SMS_INBOX = Uri.parse("content://sms/inbox");
+    private ResultsDB resultsDB;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        resultsDB = new ResultsDB(this);
         Cursor cursor = getContentResolver().query(SMS_INBOX, null, null, null, null);
         for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
             String message = cursor.getString(cursor.getColumnIndex("body"));
-            if (isMultiChoiceSMS(message)) {
-                Log.d("Message : " , message);
+            String sender = cursor.getString(cursor.getColumnIndex("address"));
+            if (shouldProcess(message,sender)) {
+                Log.d("Message : ", message);
                 Bundle bundle = new Bundle();
                 bundle.putString(AppConstants.MESSAGE, message);
                 Intent intent = new Intent(this, EvaluateReceivedText.class);
@@ -29,8 +33,14 @@ public class ScanSMS extends Activity {
         cursor.close();
     }
 
-    private boolean isMultiChoiceSMS(String message) {
-        String[] strings = message.split(" ");
-        return strings.length == 2;
+    private boolean shouldProcess(String message,String sender) {
+        String[] splitMessage = message.split(" ");
+        if (splitMessage.length != 2) {
+            return false;
+        }
+        Cursor cursor = resultsDB.fetchResultEntryFor(splitMessage[0], sender);
+        boolean containsResult = cursor.moveToFirst();
+        cursor.close();
+        return !containsResult;
     }
 }

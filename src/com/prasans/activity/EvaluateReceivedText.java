@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.util.Log;
 import com.prasans.R;
 import com.prasans.adapter.ResultsDB;
 import com.prasans.adapter.TestInfoDB;
@@ -56,9 +55,8 @@ public class EvaluateReceivedText extends Activity {
         return -1;
     }
 
-    private long persistScoreInDb(String testCode, int score, int totalCount) {
-        Log.d("Persist", phoneNumber);
-        return resultsDB.createTestEntry(testCode, phoneNumber, message, score, totalCount);
+    private void persistScoreInDb(String testCode, int score, int totalCount) {
+        resultsDB.createTestEntry(testCode, phoneNumber, message, score, totalCount);
     }
 
     private int calculateScore(String userAnswer, String answersFromDb) {
