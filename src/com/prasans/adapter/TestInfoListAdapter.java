@@ -32,17 +32,17 @@ public class TestInfoListAdapter extends ArrayAdapter<TestInfo> {
         View view = convertView;
         if (view == null) {
             LayoutInflater vi = (LayoutInflater) myContext.getSystemService(LAYOUT_INFLATER_SERVICE);
-            view = vi.inflate(R.layout.row_test_report, null);
+            view = vi.inflate(R.layout.row_test_info, null);
         }
         TestInfo testInfo = items.get(position);
         if (testInfo != null) {
             TextView testName = (TextView) view.findViewById(R.id.text_testName);
             TextView testCode = (TextView) view.findViewById(R.id.text_testCode);
             if (testCode != null) {
-                testCode.setText("TestCode: " + testInfo.getTestCode());
+                testCode.setText("Code: " + testInfo.getTestCode());
             }
             if (testName != null) {
-                testName.setText("TestName: " + testInfo.getTestName());
+                testName.setText(testInfo.getTestName());
             }
         }
         return view;

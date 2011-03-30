@@ -26,7 +26,7 @@ import static com.prasans.utils.AppConstants.TEST_CODE;
 import static com.prasans.utils.AppConstants.TEST_NAME;
 import static com.prasans.utils.Commons.displayAlert;
 
-public class AnswerEntry extends Activity {
+public class EnterAnswersScreen extends Activity {
     private TestInfoDB testInfoDB;
     private List<EditText> editTextList = new ArrayList<EditText>();
 
@@ -64,7 +64,7 @@ public class AnswerEntry extends Activity {
         public void onClick(View view) {
             String answers = buildAnswers();
             if (answers.length() != editTextList.size()) {
-                displayAlert(AnswerEntry.this, "Error", "Need to fill all answers", null);
+                displayAlert(EnterAnswersScreen.this, "Error", "Need to fill all answers", null);
                 return;
             }
             Bundle bundle = getIntent().getExtras();
@@ -72,14 +72,14 @@ public class AnswerEntry extends Activity {
             String testCode = bundle.getString(TEST_CODE);
             int count = bundle.getInt(COUNT);
             testInfoDB.createTestEntry(testName, testCode, count, answers);
-            displayAlert(AnswerEntry.this, "Success", "All the details stored successfully", proceedToHomeScreen());
+            displayAlert(EnterAnswersScreen.this, "Success", "All the details stored successfully", proceedToHomeScreen());
         }
     };
 
     private DialogInterface.OnClickListener proceedToHomeScreen() {
         return new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialogInterface, int i) {
-                Intent intent = new Intent(AnswerEntry.this, HomeScreen.class);
+                Intent intent = new Intent(EnterAnswersScreen.this, HomeScreen.class);
                 startActivityForResult(intent, RESULT_FIRST_USER);
             }
         };

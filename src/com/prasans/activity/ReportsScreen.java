@@ -28,7 +28,7 @@ public class ReportsScreen extends ListActivity {
         setContentView(R.layout.report_list);
         testInfoDB = new TestInfoDB(this);
         List<TestInfo> infoList = getTestInfo();
-        testInfoAdapter = new TestInfoListAdapter(this, R.layout.row_test_report, infoList);
+        testInfoAdapter = new TestInfoListAdapter(this, R.layout.row_test_info, infoList);
         this.setListAdapter(testInfoAdapter);
     }
 
@@ -36,7 +36,7 @@ public class ReportsScreen extends ListActivity {
     protected void onListItemClick(ListView l, View v, int position, long id) {
         super.onListItemClick(l, v, position, id);
         TestInfo testInfo = (TestInfo) this.getListAdapter().getItem(position);
-        Intent intent = new Intent(v.getContext(), IndividualScore.class);
+        Intent intent = new Intent(v.getContext(), DisplayScoreScreen.class);
         Bundle bundle = new Bundle();
         bundle.putString(TEST_CODE,testInfo.getTestCode());
         bundle.putString(TEST_NAME,testInfo.getTestName());

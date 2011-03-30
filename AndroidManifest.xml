@@ -2,19 +2,19 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.prasans">
     <application android:icon="@drawable/icon" android:label="multichoice"
-                 >
+                 android:theme="@style/MyTheme">
         <activity android:name=".activity.HomeScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".activity.TestInfoEntry"/>
-        <activity android:name=".activity.AnswerEntry"/>
+        <activity android:name=".activity.TestInfoEntryScreen"/>
+        <activity android:name=".activity.EnterAnswersScreen"/>
         <activity android:name=".activity.SendSMS"/>
         <activity android:name=".activity.EvaluateReceivedText"/>
         <activity android:name=".activity.ReportsScreen"/>
-        <activity android:name=".activity.IndividualScore"/>
+        <activity android:name=".activity.DisplayScoreScreen"/>
         <activity android:name=".activity.ScanSMS"/>
         <receiver android:name=".activity.SMSMonitor">
             <intent-filter>

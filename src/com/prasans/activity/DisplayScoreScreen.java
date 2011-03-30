@@ -13,7 +13,7 @@ import com.prasans.utils.AppConstants;
 import java.util.ArrayList;
 import java.util.List;
 
-public class IndividualScore extends ListActivity {
+public class DisplayScoreScreen extends ListActivity {
     private ResultsDB resultsDB;
     private ScoreInfoListAdapter scoreInfoListAdapter;
     private int count;

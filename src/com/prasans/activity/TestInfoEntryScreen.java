@@ -16,7 +16,7 @@ import static com.prasans.utils.AppConstants.TEST_NAME;
 import static com.prasans.utils.Commons.displayAlert;
 import static java.lang.Integer.parseInt;
 
-public class TestInfoEntry extends Activity {
+public class TestInfoEntryScreen extends Activity {
     private TestInfoDB testInfoDB;
 
     @Override
@@ -35,7 +35,7 @@ public class TestInfoEntry extends Activity {
                 String testName = getValueFrom(R.id.testName);
                 String testCode = getValueFrom(R.id.testCode);
                 if (checkForValidations(quesCount, testCode)) return;
-                Intent intent = new Intent(view.getContext(), AnswerEntry.class);
+                Intent intent = new Intent(view.getContext(), EnterAnswersScreen.class);
                 createBundleToPassUpon(quesCount, testName, testCode, intent);
                 startActivityForResult(intent, RESULT_FIRST_USER);
             }

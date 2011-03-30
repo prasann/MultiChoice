@@ -2,13 +2,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_height="fill_parent"
-              android:fadingEdge="horizontal" android:background="@drawable/bg1" android:layout_width="wrap_content">
+              android:fadingEdge="horizontal" android:layout_width="wrap_content">
     <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
                  android:layout_width="fill_parent"
                  android:layout_height="wrap_content"
                  android:layout_marginTop="50sp"
                  android:stretchColumns="1">
-        <TableRow android:paddingTop="50sp">
+        <TableRow>
             <TextView android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
                       android:text="@string/testNameLbl"
@@ -35,6 +35,7 @@
         </TableRow>
     </TableLayout>
     <Button android:id="@+id/quesBtn" android:text="@string/quesBtnLabel"
-            android:layout_height="wrap_content" android:layout_width="200sp" 
+            android:layout_height="wrap_content" android:layout_width="200sp"
+            android:layout_marginTop="50sp"
             android:layout_marginLeft="50sp"></Button>
 </LinearLayout>
