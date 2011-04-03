@@ -9,14 +9,18 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import com.prasans.adapter.ResultsDB;
-import com.prasans.utils.AppConstants;
 import com.prasans.utils.Commons;
+
+import static com.prasans.utils.AppConstants.MESSAGE;
+import static com.prasans.utils.AppConstants.PHONE_NUMBER;
+import static com.prasans.utils.AppConstants.RECEIVED_TIME;
 
 public class ScanSMS extends Activity {
     private ProgressDialog m_ProgressDialog = null;
     private static final Uri SMS_INBOX = Uri.parse("content://sms/inbox");
     private ResultsDB resultsDB;
     private Runnable scanMessages;
+    private Thread thread;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -27,24 +31,26 @@ public class ScanSMS extends Activity {
                 scanMessages();
             }
         };
-        Thread thread = new Thread(null, scanMessages, "MagentoBackground");
-        thread.start();
         m_ProgressDialog = ProgressDialog.show(this,
                 "Please wait...", "Scanning Messages ...", true);
 
-        DialogInterface.OnClickListener onclickListener = new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialogInterface, int i) {
-                Intent intent = new Intent(ScanSMS.this, HomeScreen.class);
-                startActivityForResult(intent, RESULT_FIRST_USER);
-            }
-        };
-        Commons.displayAlert(this, "Success", "Completed message scanning", onclickListener);
+        thread = new Thread(null, scanMessages, "MagentoBackground");
+        thread.start();
+
 
     }
 
     private Runnable returnRes = new Runnable() {
         public void run() {
             m_ProgressDialog.dismiss();
+
+            DialogInterface.OnClickListener onclickListener = new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    Intent intent = new Intent(ScanSMS.this, HomeScreen.class);
+                    startActivityForResult(intent, RESULT_FIRST_USER);
+                }
+            };
+            Commons.displayAlert(ScanSMS.this, "Success", "Completed message scanning", onclickListener);
         }
     };
 
@@ -53,10 +59,13 @@ public class ScanSMS extends Activity {
         for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
             String message = cursor.getString(cursor.getColumnIndex("body"));
             String sender = cursor.getString(cursor.getColumnIndex("address"));
-            if (shouldProcess(message, sender)) {
+            long receivedAt = cursor.getLong(cursor.getColumnIndex("date"));
+            if (shouldProcess(message, sender, receivedAt)) {
                 Log.d("Message : ", message);
                 Bundle bundle = new Bundle();
-                bundle.putString(AppConstants.MESSAGE, message);
+                bundle.putString(MESSAGE, message);
+                bundle.putString(PHONE_NUMBER, sender);
+                bundle.putLong(RECEIVED_TIME, receivedAt);
                 Intent intent = new Intent(this, EvaluateReceivedText.class);
                 intent.putExtras(bundle);
                 startActivityForResult(intent, RESULT_FIRST_USER);
@@ -66,14 +75,16 @@ public class ScanSMS extends Activity {
         runOnUiThread(returnRes);
     }
 
-    private boolean shouldProcess(String message, String sender) {
+    private boolean shouldProcess(String message, String sender, long receivedAt) {
+        Log.d("Received At: ", String.valueOf(receivedAt));
         String[] splitMessage = message.split(" ");
         if (splitMessage.length != 2) {
             return false;
         }
-        Cursor cursor = resultsDB.fetchResultEntryFor(splitMessage[0], sender);
+        Cursor cursor = resultsDB.fetchResultEntryFor(splitMessage[0], sender, receivedAt);
         boolean containsResult = cursor.moveToFirst();
         cursor.close();
+        resultsDB.close();
         return !containsResult;
     }
 }

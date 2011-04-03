@@ -10,13 +10,14 @@ import com.prasans.adapter.TestInfoDB;
 
 import static com.prasans.adapter.TestInfoDB.ANSWERS;
 import static com.prasans.utils.AppConstants.MESSAGE;
-import static com.prasans.utils.AppConstants.PHONE_NUMBER;
+import static com.prasans.utils.AppConstants.*;
 
 public class EvaluateReceivedText extends Activity {
     private TestInfoDB testInfoDB;
     private ResultsDB resultsDB;
     private String phoneNumber;
     private String message;
+    private long receivedAt;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -28,6 +29,7 @@ public class EvaluateReceivedText extends Activity {
         Bundle bundle = getIntent().getExtras();
         message = bundle.getString(MESSAGE);
         phoneNumber = bundle.getString(PHONE_NUMBER);
+        receivedAt = bundle.getLong(RECEIVED_TIME);
         String testCode = extractTestCode(message);
         String answers = extractAnswer(message);
         int score = processAnswer(testCode, answers);
@@ -56,7 +58,7 @@ public class EvaluateReceivedText extends Activity {
     }
 
     private void persistScoreInDb(String testCode, int score, int totalCount) {
-        resultsDB.createTestEntry(testCode, phoneNumber, message, score, totalCount);
+        resultsDB.createTestEntry(testCode, phoneNumber, message, receivedAt, score, totalCount);
     }
 
     private int calculateScore(String userAnswer, String answersFromDb) {
@@ -72,17 +74,19 @@ public class EvaluateReceivedText extends Activity {
     }
 
     private String fetchAnswerFromDb(String testCode) {
+        String answer = null;
         Cursor cursor = testInfoDB.fetchInfoFor(testCode);
         if (cursor.moveToFirst()) {
             for (; !cursor.isAfterLast(); cursor.moveToNext()) {
                 if (cursor.getInt(cursor.getColumnIndex(TestInfoDB.OPEN)) == 1) {
-                    return cursor.getString(cursor.getColumnIndex(ANSWERS));
+                    answer = cursor.getString(cursor.getColumnIndex(ANSWERS));
+                    break;
                 }
             }
         }
         cursor.close();
         testInfoDB.close();
-        return null;
+        return answer;
     }
 
     private String extractTestCode(String message) {

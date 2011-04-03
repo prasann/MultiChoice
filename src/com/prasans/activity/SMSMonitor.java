@@ -8,7 +8,7 @@ import android.telephony.SmsMessage;
 import android.util.Log;
 
 import static com.prasans.utils.AppConstants.MESSAGE;
-import static com.prasans.utils.AppConstants.PHONE_NUMBER;
+import static com.prasans.utils.AppConstants.*;
 
 public class SMSMonitor extends BroadcastReceiver {
     private static final String ACTION = "android.provider.Telephony.SMS_RECEIVED";
@@ -25,6 +25,7 @@ public class SMSMonitor extends BroadcastReceiver {
                 messages[i] = SmsMessage.createFromPdu((byte[]) pduArray[i]);
                 bundle.putString(MESSAGE,messages[i].getDisplayMessageBody());
                 bundle.putString(PHONE_NUMBER,messages[i].getDisplayOriginatingAddress());
+                bundle.putLong(RECEIVED_TIME,messages[i].getTimestampMillis());
             }
             Log.d("MySMSMonitor", "SMS Message Received.");
 
