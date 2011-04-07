@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.SeekBar;
+import android.widget.SeekBar.OnSeekBarChangeListener;
+import android.widget.TextView;
 import com.prasans.R;
 import com.prasans.adapter.TestInfoDB;
 
@@ -26,12 +29,27 @@ public class TestInfoEntryScreen extends Activity {
         Button button = (Button) findViewById(R.id.quesBtn);
         button.setOnClickListener(buttonListener());
         testInfoDB = new TestInfoDB(this);
+        
+        SeekBar questSeekBar = (SeekBar) findViewById(R.id.questSeek);
+        questSeekBar.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
+			
+			public void onStopTrackingTouch(SeekBar arg0) {
+			}
+			
+			public void onStartTrackingTouch(SeekBar arg0) {
+			}
+			
+			public void onProgressChanged(SeekBar arg0, int progress, boolean arg2) {
+				((TextView) TestInfoEntryScreen.this.findViewById(R.id.questCount)).setText(String.valueOf(progress+1));
+			}
+		});
     }
 
     private View.OnClickListener buttonListener() {
         return new View.OnClickListener() {
             public void onClick(View view) {
-                String quesCount = getValueFrom(R.id.questCount);
+                TextView textView = (TextView)findViewById(R.id.questCount);
+                String quesCount = textView.getText().toString();
                 String testName = getValueFrom(R.id.testName);
                 String testCode = getValueFrom(R.id.testCode);
                 if (checkForValidations(quesCount, testCode)) return;
