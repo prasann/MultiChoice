@@ -3,12 +3,8 @@ package com.prasans.activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 import android.telephony.SmsMessage;
 import android.util.Log;
-
-import static com.prasans.utils.AppConstants.MESSAGE;
-import static com.prasans.utils.AppConstants.*;
 
 public class SMSMonitor extends BroadcastReceiver {
     private static final String ACTION = "android.provider.Telephony.SMS_RECEIVED";
@@ -20,20 +16,19 @@ public class SMSMonitor extends BroadcastReceiver {
             Object[] pduArray = (Object[]) intent.getExtras().get("pdus");
             SmsMessage[] messages = new SmsMessage[pduArray.length];
 
-            Bundle bundle = new Bundle();
             for (int i = 0; i < pduArray.length; i++) {
                 messages[i] = SmsMessage.createFromPdu((byte[]) pduArray[i]);
-                bundle.putString(MESSAGE,messages[i].getDisplayMessageBody());
-                bundle.putString(PHONE_NUMBER,messages[i].getDisplayOriginatingAddress());
-                bundle.putLong(RECEIVED_TIME,messages[i].getTimestampMillis());
+                String message = messages[i].getDisplayMessageBody();
+                String phoneNumber = messages[i].getDisplayOriginatingAddress();
+                long receivedTime = messages[i].getTimestampMillis();
+                evaluateReceivedText(message, phoneNumber, receivedTime,context).execute();
             }
             Log.d("MySMSMonitor", "SMS Message Received.");
 
-            Intent callIntent = new Intent(Intent.ACTION_CALL);
-            callIntent.putExtras(bundle);
-            callIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            callIntent.setClass(context, EvaluateReceivedText.class);
-            context.startActivity(callIntent);
         }
+    }
+
+    private EvaluateReceivedText evaluateReceivedText(String message, String phoneNumber, long receivedTime,Context context) {
+        return new EvaluateReceivedText(phoneNumber,message,receivedTime, context);
     }
 }

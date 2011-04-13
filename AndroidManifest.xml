@@ -11,8 +11,6 @@
         </activity>
         <activity android:name=".activity.TestInfoEntryScreen"/>
         <activity android:name=".activity.EnterAnswersScreen"/>
-        <activity android:name=".activity.SendSMS"/>
-        <activity android:name=".activity.EvaluateReceivedText"/>
         <activity android:name=".activity.ReportsScreen"/>
         <activity android:name=".activity.DisplayScoreScreen"/>
         <activity android:name=".activity.ScanSMS"/>

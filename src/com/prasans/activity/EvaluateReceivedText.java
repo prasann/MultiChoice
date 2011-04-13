@@ -1,50 +1,36 @@
 package com.prasans.activity;
 
-import android.app.Activity;
-import android.content.Intent;
+import android.content.Context;
 import android.database.Cursor;
-import android.os.Bundle;
-import com.prasans.R;
+import android.os.AsyncTask;
+import android.util.Log;
 import com.prasans.adapter.ResultsDB;
 import com.prasans.adapter.TestInfoDB;
 
 import static com.prasans.adapter.TestInfoDB.ANSWERS;
-import static com.prasans.utils.AppConstants.MESSAGE;
-import static com.prasans.utils.AppConstants.*;
 
-public class EvaluateReceivedText extends Activity {
+public class EvaluateReceivedText extends AsyncTask<Void,Void,Void> {
     private TestInfoDB testInfoDB;
     private ResultsDB resultsDB;
     private String phoneNumber;
     private String message;
     private long receivedAt;
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.home);
-        testInfoDB = new TestInfoDB(this);
-        resultsDB = new ResultsDB(this);
+    public EvaluateReceivedText(String phoneNumber, String message, long receivedAt, Context context) {
+        this.phoneNumber = phoneNumber;
+        this.message = message;
+        this.receivedAt = receivedAt;
+        testInfoDB = new TestInfoDB(context);
+        resultsDB = new ResultsDB(context);
+    }
 
-        Bundle bundle = getIntent().getExtras();
-        message = bundle.getString(MESSAGE);
-        phoneNumber = bundle.getString(PHONE_NUMBER);
-        receivedAt = bundle.getLong(RECEIVED_TIME);
+    public void process() {
         String testCode = extractTestCode(message);
         String answers = extractAnswer(message);
         int score = processAnswer(testCode, answers);
         if (score != -1) {
-            sendScoreInSms(score);
+            new SendSMS().sendSms(phoneNumber, "You have Scored " + score);
         }
-    }
-
-    private void sendScoreInSms(int score) {
-        Intent intent = new Intent(EvaluateReceivedText.this, SendSMS.class);
-        Bundle bundle = new Bundle();
-        bundle.putInt("score", score);
-        bundle.putString(PHONE_NUMBER, phoneNumber);
-        intent.putExtras(bundle);
-        startActivityForResult(intent, RESULT_FIRST_USER);
     }
 
     private int processAnswer(String testCode, String answers) {
@@ -95,5 +81,21 @@ public class EvaluateReceivedText extends Activity {
 
     private String extractAnswer(String message) {
         return message.split(" ")[1];
+    }
+
+    @Override
+    protected void onPreExecute() {
+        Log.d("ERT","About to start evaluating Message");
+    }
+
+    @Override
+    protected Void doInBackground(Void... voids) {
+        this.process();
+        return null;
+    }
+
+    @Override
+    protected void onPostExecute(Void aVoid) {
+        super.onPostExecute(aVoid);
     }
 }
