@@ -29,7 +29,7 @@ public class EvaluateReceivedText extends AsyncTask<Void,Void,Void> {
         String answers = extractAnswer(message);
         int score = processAnswer(testCode, answers);
         if (score != -1) {
-            new SendSMS().sendSms(phoneNumber, "You have Scored " + score);
+            new SendSMS().sendSms(phoneNumber, "Your have scored " + score + "for the Test Code " + testCode);
         }
     }
 

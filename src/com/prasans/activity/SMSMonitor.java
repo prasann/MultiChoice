@@ -24,7 +24,6 @@ public class SMSMonitor extends BroadcastReceiver {
                 evaluateReceivedText(message, phoneNumber, receivedTime,context).execute();
             }
             Log.d("MySMSMonitor", "SMS Message Received.");
-
         }
     }
 

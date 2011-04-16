@@ -17,24 +17,12 @@ public class HomeScreen extends Activity {
 
         Button reports = (Button) findViewById(R.id.reportsBtn);
         reports.setOnClickListener(reportsBtnClk());
-
-        Button scanSms = (Button) findViewById(R.id.scanMessageBtn);
-        scanSms.setOnClickListener(scanMessageBtnClk());
     }
 
     private View.OnClickListener createTestBtnClk() {
         return new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intent = new Intent(view.getContext(), TestInfoEntryScreen.class);
-                startActivityForResult(intent, RESULT_FIRST_USER);
-            }
-        };
-    }
-
-    private View.OnClickListener scanMessageBtnClk() {
-        return new View.OnClickListener() {
-            public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), ScanSMS.class);
                 startActivityForResult(intent, RESULT_FIRST_USER);
             }
         };
