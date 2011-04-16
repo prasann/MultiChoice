@@ -27,6 +27,7 @@ import static com.prasans.utils.AppConstants.COUNT;
 import static com.prasans.utils.AppConstants.TEST_CODE;
 import static com.prasans.utils.AppConstants.TEST_NAME;
 import static com.prasans.utils.Commons.displayAlert;
+import static java.lang.String.valueOf;
 
 public class EnterChoicesScreen extends Activity {
     private TestInfoDB testInfoDB;
@@ -73,7 +74,7 @@ public class EnterChoicesScreen extends Activity {
         RadioGroup radioGroup = radioGroup();
         linearLayout.addView(textView);
         linearLayout.addView(radioGroup);
-        linearLayout.setPadding(0,10,0,0);
+        linearLayout.setPadding(0, 10, 0, 0);
         return linearLayout;
     }
 
@@ -116,7 +117,7 @@ public class EnterChoicesScreen extends Activity {
         public void onClick(View view) {
             String answers = buildAnswers();
             if (answers.length() != radioGroupList.size()) {
-                displayAlert(EnterChoicesScreen.this, "Error", "Need to fill all answers", null);
+                displayAlert(EnterChoicesScreen.this, "Error", "Answers: "+answers + "RGL: " +radioGroupList.size(), null);
                 return;
             }
             Bundle bundle = getIntent().getExtras();
@@ -141,7 +142,9 @@ public class EnterChoicesScreen extends Activity {
         StringBuilder answerBuilder = new StringBuilder();
         for (RadioGroup radioGroup : radioGroupList) {
             RadioButton radioButton = (RadioButton) findViewById(radioGroup.getCheckedRadioButtonId());
-            answerBuilder = answerBuilder.append(radioButton.getText());
+            if (radioButton != null) {
+                answerBuilder.append(valueOf(radioButton.getText()).trim());
+            }
         }
         return answerBuilder.toString();
     }
