@@ -53,7 +53,7 @@ public class TestInfoEntryScreen extends Activity {
                 String testName = getValueFrom(R.id.testName);
                 String testCode = getValueFrom(R.id.testCode);
                 if (checkForValidations(quesCount, testCode)) return;
-                Intent intent = new Intent(view.getContext(), EnterAnswersScreen.class);
+                Intent intent = new Intent(view.getContext(), EnterChoicesScreen.class);
                 createBundleToPassUpon(quesCount, testName, testCode, intent);
                 startActivityForResult(intent, RESULT_FIRST_USER);
             }

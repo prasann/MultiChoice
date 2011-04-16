@@ -14,6 +14,7 @@
         <activity android:name=".activity.ReportsScreen"/>
         <activity android:name=".activity.DisplayScoreScreen"/>
         <activity android:name=".activity.ScanSMS"/>
+        <activity android:name=".activity.EnterChoicesScreen"/>
         <receiver android:name=".activity.SMSMonitor">
             <intent-filter>
                 <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
