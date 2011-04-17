@@ -2,8 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="fill_parent"
-              android:layout_height="fill_parent">
-    
-    <Button android:layout_marginLeft="50sp" android:id="@+id/createBtn" android:layout_width="200sp" android:text="@string/createTestBtnLabel" android:layout_height="wrap_content"></Button>
-    <Button android:layout_marginLeft="50sp" android:id="@+id/reportsBtn" android:layout_width="200sp" android:text="@string/reportsBtnLabel" android:layout_height="wrap_content"></Button>
+              android:layout_height="fill_parent" android:background="@drawable/darkaurora">
+    <LinearLayout android:layout_height="wrap_content" android:id="@+id/linearLayout1" android:layout_width="match_parent" android:background="@drawable/header"></LinearLayout>
+
+    <Button android:layout_marginLeft="50sp" android:id="@+id/createBtn" android:layout_width="200sp" android:text="@string/createTestBtnLabel" android:layout_height="wrap_content" android:layout_marginTop="20dip"></Button>
+    <Button android:layout_marginLeft="50sp" android:id="@+id/reportsBtn" android:layout_width="200sp" android:text="@string/reportsBtnLabel" android:layout_height="wrap_content" android:layout_marginTop="20dip"></Button>
 </LinearLayout>

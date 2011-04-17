@@ -19,7 +19,6 @@ import java.util.List;
 public class DisplayScoreScreen extends ListActivity {
     private ResultsDB resultsDB;
     private ScoreInfoListAdapter scoreInfoListAdapter;
-    private int count;
     private ContactInfoAdapter contactInfoAdapter;
 
     @Override
@@ -37,8 +36,6 @@ public class DisplayScoreScreen extends ListActivity {
         testName.setText(bundle.getString(AppConstants.TEST_NAME));
         TextView receivedCount = (TextView)findViewById(R.id.answerReceivedCount);
         receivedCount.setText(String.valueOf(infoList.size()));
-        TextView questCount = (TextView)findViewById(R.id.totalQuestcount);
-        questCount.setText(String.valueOf(count));
     }
 
     private List<ScoreInfo> getScoresFor(String testCode) {
@@ -53,9 +50,10 @@ public class DisplayScoreScreen extends ListActivity {
             String number = cursor.getString(cursor.getColumnIndex(ResultsDB.SENDER));
             scoreInfo.setPhoneNumber(contactInfoAdapter.lookUp(number));
             scoreInfo.setReceivedTime(formattedDate);
-            scoreInfo.setScore(cursor.getString(cursor.getColumnIndex(ResultsDB.SCORE)));
+            String score = cursor.getString(cursor.getColumnIndex(ResultsDB.SCORE));
+            int count = cursor.getInt(cursor.getColumnIndex(ResultsDB.TOTAL_COUNT));
+			scoreInfo.setScore(score+"/"+String.valueOf(count));
             scoreInfoList.add(scoreInfo);
-            count = cursor.getInt(cursor.getColumnIndex(ResultsDB.TOTAL_COUNT));
         }
         cursor.close();
         return scoreInfoList;

@@ -3,13 +3,11 @@
               android:orientation="vertical"
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"
-        >
+        android:background="@drawable/darkaurora">
     <ListView
             android:id="@+id/android:list"
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:background="@color/black"
-            />
+            android:layout_height="fill_parent" android:background="@color/black"/>
     <TextView
             android:id="@+id/android:empty"
             android:layout_width="fill_parent"

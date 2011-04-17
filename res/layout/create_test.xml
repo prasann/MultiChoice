@@ -2,10 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_height="fill_parent"
-              android:fadingEdge="horizontal" android:layout_width="match_parent">
+              android:fadingEdge="horizontal" android:layout_width="match_parent" android:background="@drawable/darkaurora">
     <TextView android:paddingTop="10dp" android:id="@+id/TextView01" android:paddingLeft="5dp"
-              android:layout_height="wrap_content" android:layout_width="match_parent" android:text="Test Name"
-              android:paddingBottom="10dp"/>
+              android:layout_height="wrap_content" android:text="Test Name"
+              android:paddingBottom="10dp" android:layout_width="wrap_content"/>
     <EditText android:paddingLeft="5dp" android:layout_height="wrap_content" android:layout_width="match_parent"
               android:id="@+id/testName"/>
     <TextView android:id="@+id/textView1" android:layout_height="wrap_content" android:layout_width="match_parent"
