@@ -62,7 +62,7 @@ public class TestInfoDB extends BaseDB {
         this.open(mCtx);
         return mDb.query(DATABASE_TABLE,
                 new String[]{KEY_ROWID, TEST_NAME, TEST_CODE, QUES_COUNT, ANSWERS, OPEN},
-                "test_code = '" + testCode + "'", null, null, null, null);
+                "test_code = '" + testCode + "' COLLATE NOCASE", null, null, null, null);
 
     }
 

@@ -5,6 +5,7 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.widget.TextView;
 import com.prasans.R;
+import com.prasans.adapter.ContactInfoAdapter;
 import com.prasans.adapter.ResultsDB;
 import com.prasans.adapter.ScoreInfoListAdapter;
 import com.prasans.domain.ScoreInfo;
@@ -17,12 +18,14 @@ public class DisplayScoreScreen extends ListActivity {
     private ResultsDB resultsDB;
     private ScoreInfoListAdapter scoreInfoListAdapter;
     private int count;
+    private ContactInfoAdapter contactInfoAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.score_sheet);
         resultsDB = new ResultsDB(this);
+        contactInfoAdapter = new ContactInfoAdapter(this);
         Bundle bundle = getIntent().getExtras();
         String testCode = bundle.getString(AppConstants.TEST_CODE);
         List<ScoreInfo> infoList = getScoresFor(testCode);
@@ -41,7 +44,8 @@ public class DisplayScoreScreen extends ListActivity {
         Cursor cursor = resultsDB.fetchAllResultsFor(testCode);
         for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
             ScoreInfo scoreInfo = new ScoreInfo();
-            scoreInfo.setPhoneNumber(cursor.getString(cursor.getColumnIndex(ResultsDB.SENDER)));
+            String number = cursor.getString(cursor.getColumnIndex(ResultsDB.SENDER));
+            scoreInfo.setPhoneNumber(contactInfoAdapter.lookUp(number));
             scoreInfo.setScore(cursor.getString(cursor.getColumnIndex(ResultsDB.SCORE)));
             scoreInfoList.add(scoreInfo);
             count = cursor.getInt(cursor.getColumnIndex(ResultsDB.TOTAL_COUNT));
