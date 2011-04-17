@@ -11,7 +11,9 @@ import com.prasans.adapter.ScoreInfoListAdapter;
 import com.prasans.domain.ScoreInfo;
 import com.prasans.utils.AppConstants;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class DisplayScoreScreen extends ListActivity {
@@ -43,9 +45,14 @@ public class DisplayScoreScreen extends ListActivity {
         List<ScoreInfo> scoreInfoList = new ArrayList<ScoreInfo>();
         Cursor cursor = resultsDB.fetchAllResultsFor(testCode);
         for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
+            long timeInMillis = cursor.getLong(cursor.getColumnIndex(ResultsDB.RECEIVED_TIME));
+            Date date = new Date(timeInMillis);
+            String formattedDate = new SimpleDateFormat("dd-MMM-yy HH:mm:ss").format(date);
+
             ScoreInfo scoreInfo = new ScoreInfo();
             String number = cursor.getString(cursor.getColumnIndex(ResultsDB.SENDER));
             scoreInfo.setPhoneNumber(contactInfoAdapter.lookUp(number));
+            scoreInfo.setReceivedTime(formattedDate);
             scoreInfo.setScore(cursor.getString(cursor.getColumnIndex(ResultsDB.SCORE)));
             scoreInfoList.add(scoreInfo);
             count = cursor.getInt(cursor.getColumnIndex(ResultsDB.TOTAL_COUNT));

@@ -38,13 +38,17 @@ public class ScoreInfoListAdapter extends ArrayAdapter<ScoreInfo> {
         if (scoreInfo != null) {
             TextView number = (TextView) view.findViewById(R.id.row_number);
             TextView score = (TextView) view.findViewById(R.id.row_score);
-            if (score != null) {
-                score.setText(scoreInfo.getScore());
-            }
-            if (number != null) {
-                number.setText(scoreInfo.getPhoneNumber());
-            }
+            TextView time = (TextView) view.findViewById(R.id.row_time);
+            setFields(scoreInfo.getPhoneNumber(), number);
+            setFields(scoreInfo.getScore(), score);
+            setFields(scoreInfo.getReceivedTime(), time);
         }
         return view;
+    }
+
+    private void setFields(String text, TextView textView) {
+        if (textView != null) {
+            textView.setText(text);
+        }
     }
 }

@@ -44,7 +44,7 @@ public class ResultsDB extends BaseDB {
         this.open(mCtx);
         return mDb.query(DATABASE_TABLE,
                 new String[]{KEY_ROWID, TEST_CODE, SENDER, ANSWERS, RECEIVED_TIME, SCORE, TOTAL_COUNT},
-                "test_code = '" + testCode + "'", null, null, null, null);
+                "test_code = '" + testCode + "'", null, null, null,RECEIVED_TIME );
     }
 
     public Cursor fetchResultEntryFor(String testCode, String sender,long receivedAt) {

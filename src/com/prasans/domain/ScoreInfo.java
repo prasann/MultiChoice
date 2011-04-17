@@ -3,6 +3,7 @@ package com.prasans.domain;
 public class ScoreInfo {
     private String phoneNumber;
     private String score;
+    private String receivedTime;
 
     public String getPhoneNumber() {
         return phoneNumber;
@@ -18,5 +19,13 @@ public class ScoreInfo {
 
     public void setScore(String score) {
         this.score = score;
+    }
+
+    public String getReceivedTime() {
+        return receivedTime;
+    }
+
+    public void setReceivedTime(String receivedTime) {
+        this.receivedTime = receivedTime;
     }
 }
