@@ -4,5 +4,6 @@
         <item name="android:typeface">sans</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/darkaurora</item>
     </style>
 </resources>
