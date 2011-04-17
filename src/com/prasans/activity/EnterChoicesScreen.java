@@ -122,7 +122,7 @@ public class EnterChoicesScreen extends Activity {
             }
             Bundle bundle = getIntent().getExtras();
             String testName = bundle.getString(TEST_NAME);
-            String testCode = bundle.getString(TEST_CODE);
+            String testCode = bundle.getString(TEST_CODE).toLowerCase();
             int count = bundle.getInt(COUNT);
             testInfoDB.createTestEntry(testName, testCode, count, answers);
             displayAlert(EnterChoicesScreen.this, "Success", "All the details stored successfully", proceedToHomeScreen());

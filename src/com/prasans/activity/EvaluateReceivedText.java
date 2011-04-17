@@ -9,7 +9,7 @@ import com.prasans.adapter.TestInfoDB;
 
 import static com.prasans.adapter.TestInfoDB.ANSWERS;
 
-public class EvaluateReceivedText extends AsyncTask<Void,Void,Void> {
+public class EvaluateReceivedText extends AsyncTask<Void, Void, Void> {
     private TestInfoDB testInfoDB;
     private ResultsDB resultsDB;
     private String phoneNumber;
@@ -29,7 +29,7 @@ public class EvaluateReceivedText extends AsyncTask<Void,Void,Void> {
         String answers = extractAnswer(message);
         int score = processAnswer(testCode, answers);
         if (score != -1) {
-            new SendSMS().sendSms(phoneNumber, "Your have scored " + score + "for the Test Code " + testCode);
+            new SendSMS().sendSms(phoneNumber, "Congrtas !! Your have scored " + score + "/" + answers.length() + " for the Test Code " + testCode);
         }
     }
 
@@ -85,7 +85,7 @@ public class EvaluateReceivedText extends AsyncTask<Void,Void,Void> {
 
     @Override
     protected void onPreExecute() {
-        Log.d("ERT","About to start evaluating Message");
+        Log.d("ERT", "About to start evaluating Message");
     }
 
     @Override
