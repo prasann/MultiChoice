@@ -1,4 +1,13 @@
 <resources>
     <color name="black">#00000000</color>
     <color name="white">#ffffffff</color>
+    <color name="yellow1">#FFFF99</color>
+    <color name="yellow2">#FFCC00</color>
+    <color name="orange1">#FF9966</color>
+    <color name="orange2">#FF6600</color>
+    <color name="blue1">#99CCFF</color>
+    <color name="blue2">#0033CC</color>
+    <color name="grey">#736F6E</color>
+    <color name="grey1">#55FFFFFF</color>
+    <color name="grey2">#44636363</color>
 </resources>

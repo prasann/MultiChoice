@@ -15,22 +15,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="fa3993d4-51d3-4e73-aaf7-3171651ba09b" name="Default" comment="Made the test Code Case insensitive">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/prasans/activity/DisplayScoreScreen.java" afterPath="$PROJECT_DIR$/src/com/prasans/activity/DisplayScoreScreen.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/custom_btn.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/list_bg.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/colors.xml" afterPath="$PROJECT_DIR$/res/values/colors.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/button_bg.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/styles.xml" afterPath="$PROJECT_DIR$/res/values/styles.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/report_list.xml" afterPath="$PROJECT_DIR$/res/layout/report_list.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable/icon.png" afterPath="$PROJECT_DIR$/res/drawable/icon.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/row_test_info.xml" afterPath="$PROJECT_DIR$/res/layout/row_test_info.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/multichoice.iws" afterPath="$PROJECT_DIR$/multichoice.iws" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/row_score.xml" afterPath="$PROJECT_DIR$/res/layout/row_score.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/home.xml" afterPath="$PROJECT_DIR$/res/layout/home.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
-      <change type="DELETED" beforePath="D:\multichoice\res\drawable\bg1.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/score_sheet.xml" afterPath="$PROJECT_DIR$/res/layout/score_sheet.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/create_test.xml" afterPath="$PROJECT_DIR$/res/layout/create_test.xml" />
     </list>
-    <list id="4b554f7a-f2da-4eca-b238-c5ac2ace944a" name="ignore.on.commit" comment="ignore.on.commit">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/multichoice.iws" afterPath="$PROJECT_DIR$/multichoice.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/multichoice.ipr" afterPath="$PROJECT_DIR$/multichoice.ipr" />
-    </list>
+    <list id="4b554f7a-f2da-4eca-b238-c5ac2ace944a" name="ignore.on.commit" comment="ignore.on.commit" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="multichoice.iws" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -117,19 +114,73 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <file leaf-file-name="styles.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="41" selection-start="257" selection-end="257" vertical-scroll-proportion="0.0">
+            <state line="9" column="57" selection-start="508" selection-end="517" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="styles.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
+      <file leaf-file-name="list_bg.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/list_bg.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="30" selection-start="328" selection-end="328" vertical-scroll-proportion="0.21198156">
+            <state line="7" column="27" selection-start="321" selection-end="328" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="custom_btn.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/res/layout/custom_btn.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="22" selection-start="716" selection-end="716" vertical-scroll-proportion="0.7066052">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="report_list.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/report_list.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="16" selection-start="222" selection-end="222" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="colors.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/values/colors.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="0" selection-start="96" selection-end="96" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="R.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gen/com/prasans/R.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="32" selection-start="793" selection-end="793" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="button_bg.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/button_bg.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="53" selection-start="149" selection-end="149" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="row_test_info.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/row_test_info.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="20" selection-start="575" selection-end="575" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -138,7 +189,7 @@
       <file leaf-file-name="create_test.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/layout/create_test.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="22" selection-start="1410" selection-end="1410" vertical-scroll-proportion="0.0">
+            <state line="19" column="21" selection-start="1500" selection-end="1500" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -147,7 +198,7 @@
       <file leaf-file-name="home.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/layout/home.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="47" selection-start="193" selection-end="204" vertical-scroll-proportion="0.0">
+            <state line="7" column="20" selection-start="480" selection-end="480" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -167,22 +218,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/res/layout/report_list.xml" />
-        <option value="$PROJECT_DIR$/res/layout/score_sheet.xml" />
-        <option value="$PROJECT_DIR$/src/com/prasans/adapter/TestInfoDB.java" />
-        <option value="$PROJECT_DIR$/src/com/prasans/adapter/ContactInfo.java" />
-        <option value="$PROJECT_DIR$/src/com/prasans/adapter/ContactInfoAdapter.java" />
-        <option value="$PROJECT_DIR$/src/com/prasans/domain/ScoreInfo.java" />
-        <option value="$PROJECT_DIR$/src/com/prasans/adapter/ScoreInfoListAdapter.java" />
-        <option value="$PROJECT_DIR$/res/layout/row_score.xml" />
-        <option value="$PROJECT_DIR$/src/com/prasans/activity/DisplayScoreScreen.java" />
-        <option value="$PROJECT_DIR$/src/com/prasans/adapter/ResultsDB.java" />
         <option value="$PROJECT_DIR$/src/com/prasans/activity/TestInfoEntryScreen.java" />
         <option value="$PROJECT_DIR$/src/com/prasans/activity/EnterChoicesScreen.java" />
         <option value="$PROJECT_DIR$/src/com/prasans/activity/EvaluateReceivedText.java" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/res/layout/create_test.xml" />
+        <option value="$PROJECT_DIR$/res/layout/list-bg.xml" />
+        <option value="$PROJECT_DIR$/res/layout/score_sheet.xml" />
+        <option value="$PROJECT_DIR$/res/layout/row_score.xml" />
+        <option value="$PROJECT_DIR$/res/layout/report_list.xml" />
         <option value="$PROJECT_DIR$/res/values/styles.xml" />
+        <option value="$PROJECT_DIR$/res/layout/home.xml" />
+        <option value="$PROJECT_DIR$/res/layout/button_bg.xml" />
+        <option value="$PROJECT_DIR$/gen/com/prasans/R.java" />
+        <option value="$PROJECT_DIR$/res/layout/row_test_info.xml" />
+        <option value="$PROJECT_DIR$/res/values/colors.xml" />
+        <option value="$PROJECT_DIR$/res/layout/custom_btn.xml" />
       </list>
     </option>
   </component>
@@ -228,9 +279,9 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Favorites" />
       <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="Favorites" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -657,6 +708,7 @@
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32910156" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32910156" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="ConsoleMavenPlugin" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32910156" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959914" sideWeight="0.22460938" order="1" side_tool="true" content_ui="tabs" />
@@ -670,7 +722,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32910156" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32910156" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3998045" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -735,51 +786,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/res/layout/score_sheet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="33" selection-start="2665" selection-end="2665" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/prasans/domain/ScoreInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="37" selection-start="491" selection-end="491" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/prasans/adapter/ScoreInfoListAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="49" selection-start="1715" selection-end="1715" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/row_score.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="30" selection-start="1097" selection-end="1097" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/prasans/activity/DisplayScoreScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="7" selection-start="2739" selection-end="2739" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/prasans/activity/ReportsScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="45" selection-start="1322" selection-end="1322" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/prasans/adapter/ResultsDB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="20" selection-start="1700" selection-end="1700" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/prasans/activity/TestInfoEntryScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="64" selection-start="2131" selection-end="2131" vertical-scroll-proportion="-4.259259" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/prasans/activity/EnterAnswersScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="23" selection-start="2903" selection-end="2903" vertical-scroll-proportion="0.33266333" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/prasans/activity/EnterChoicesScreen.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="121" column="56" selection-start="4701" selection-end="4701" vertical-scroll-proportion="0.0" />
@@ -795,28 +801,85 @@
         <state line="43" column="17" selection-start="1556" selection-end="1556" vertical-scroll-proportion="0.51758796" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/home.xml">
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="47" selection-start="193" selection-end="204" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="4" column="41" selection-start="258" selection-end="258" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/row_score.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="73" selection-start="330" selection-end="330" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/score_sheet.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="12" selection-start="1658" selection-end="1658" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/create_test.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="22" selection-start="1410" selection-end="1410" vertical-scroll-proportion="0.0">
+        <state line="19" column="21" selection-start="1500" selection-end="1500" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/home.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="20" selection-start="480" selection-end="480" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="41" selection-start="257" selection-end="257" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="30" selection-start="328" selection-end="328" vertical-scroll-proportion="0.21198156">
+        <state line="9" column="57" selection-start="508" selection-end="517" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/list_bg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="27" selection-start="321" selection-end="328" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/row_test_info.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="20" selection-start="575" selection-end="575" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/button_bg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="53" selection-start="149" selection-end="149" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gen/com/prasans/R.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="32" selection-start="793" selection-end="793" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="96" selection-end="96" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/report_list.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="16" selection-start="222" selection-end="222" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/custom_btn.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="22" selection-start="716" selection-end="716" vertical-scroll-proportion="0.7066052">
           <folding />
         </state>
       </provider>
