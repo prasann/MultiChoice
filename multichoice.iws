@@ -15,16 +15,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fa3993d4-51d3-4e73-aaf7-3171651ba09b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/about.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/about.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gen/com/prasans/R.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/splashscreen.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/prasans/multichoice/activity/SplashScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/com/prasans/R.java" afterPath="$PROJECT_DIR$/gen/com/prasans/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/multichoice.iws" afterPath="$PROJECT_DIR$/multichoice.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/home.xml" afterPath="$PROJECT_DIR$/res/layout/home.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/prasans/multichoice/activity/EnterChoicesScreen.java" afterPath="$PROJECT_DIR$/src/com/prasans/multichoice/activity/EnterChoicesScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/prasans/multichoice/activity/HomeScreen.java" afterPath="$PROJECT_DIR$/src/com/prasans/multichoice/activity/HomeScreen.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/splashscreen.xml" afterPath="$PROJECT_DIR$/res/layout/splashscreen.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/prasans/multichoice/activity/SplashScreen.java" afterPath="$PROJECT_DIR$/src/com/prasans/multichoice/activity/SplashScreen.java" />
     </list>
     <list id="4b554f7a-f2da-4eca-b238-c5ac2ace944a" name="ignore.on.commit" comment="ignore.on.commit" />
     <ignored path=".idea/workspace.xml" />
@@ -46,7 +40,7 @@
   </component>
   <component name="DebuggerManager">
     <line_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/prasans/multichoice/adapter/ResultsDB.java" line="34" class="com.prasans.adapter.ResultsDB" package="com.prasans.adapter">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/prasans/multichoice/adapter/ResultsDB.java" line="34" class="com.prasans.multichoice.adapter.ResultsDB" package="com.prasans.multichoice.adapter">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -59,7 +53,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/prasans/multichoice/activity/EnterChoicesScreen.java" line="118" class="com.prasans.activity.EnterChoicesScreen$1" package="com.prasans.activity">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/prasans/multichoice/activity/EnterChoicesScreen.java" line="118" class="com.prasans.multichoice.activity.EnterChoicesScreen$1" package="com.prasans.multichoice.activity">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -134,7 +128,7 @@
       <file leaf-file-name="SplashScreen.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/prasans/multichoice/activity/SplashScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="24" selection-start="532" selection-end="532" vertical-scroll-proportion="0.0">
+            <state line="15" column="84" selection-start="595" selection-end="595" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -149,10 +143,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="splashscreen.xml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="splashscreen.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/res/layout/splashscreen.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="41" selection-start="203" selection-end="203" vertical-scroll-proportion="0.0">
+            <state line="8" column="44" selection-start="406" selection-end="406" vertical-scroll-proportion="0.31560892">
               <folding />
             </state>
           </provider>
@@ -194,10 +188,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="R.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="R.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gen/com/prasans/R.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="27" selection-start="2548" selection-end="2548" vertical-scroll-proportion="0.5776699">
+            <state line="28" column="32" selection-start="1049" selection-end="1049" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -226,13 +220,13 @@
         <option value="$PROJECT_DIR$/res/layout/custom_btn.xml" />
         <option value="$PROJECT_DIR$/res/layout/button_bg.xml" />
         <option value="$PROJECT_DIR$/res/values/colors.xml" />
-        <option value="$PROJECT_DIR$/src/com/prasans/multichoice/activity/SplashScreen.java" />
         <option value="$PROJECT_DIR$/src/com/prasans/multichoice/activity/EnterChoicesScreen.java" />
-        <option value="$PROJECT_DIR$/res/layout/splashscreen.xml" />
         <option value="$PROJECT_DIR$/src/com/prasans/multichoice/activity/HomeScreen.java" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/res/layout/home.xml" />
         <option value="$PROJECT_DIR$/gen/com/prasans/R.java" />
+        <option value="$PROJECT_DIR$/src/com/prasans/multichoice/activity/SplashScreen.java" />
+        <option value="$PROJECT_DIR$/res/layout/splashscreen.xml" />
       </list>
     </option>
   </component>
@@ -378,14 +372,14 @@
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Modules" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="205" />
-    <property name="OverrideImplement.combined" value="true" />
-    <property name="project.structure.proportion" value="0.0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="254" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="OverrideImplement.combined" value="true" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="217" />
-    <property name="recentsLimit" value="5" />
-    <property name="MemberChooser.sorted" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="217" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="238" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1142" />
@@ -401,8 +395,8 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
     <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
@@ -477,6 +471,24 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$IDEA_HOME$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" />
       <module name="" />
@@ -503,24 +515,6 @@
       <envs />
       <properties />
       <listeners />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$IDEA_HOME$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -681,12 +675,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1170" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5701754" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5701754" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32910156" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39941406" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32910156" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32846004" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -695,11 +688,12 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33814102" sideWeight="0.6091618" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3908382" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3908382" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Android Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3232422" sideWeight="0.0" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="91" y="91" width="1738" height="970" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32910156" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="ConsoleMavenPlugin" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -777,105 +771,81 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/report_list.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="5" selection-start="44" selection-end="44" vertical-scroll-proportion="0.034848485">
-          <folding />
-        </state>
+        <state line="1" column="5" selection-start="44" selection-end="44" vertical-scroll-proportion="0.034848485" />
       </provider>
     </entry>
     <entry file="jar://D:/android-sdk-windows/platforms/android-8/android.jar!/android/widget/LinearLayout.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="191" selection-end="191" vertical-scroll-proportion="0.036977492">
-          <folding />
-        </state>
+        <state line="6" column="13" selection-start="191" selection-end="191" vertical-scroll-proportion="0.036977492" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/row_test_info.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="20" selection-start="575" selection-end="575" vertical-scroll-proportion="0.3030303">
-          <folding />
-        </state>
+        <state line="13" column="20" selection-start="575" selection-end="575" vertical-scroll-proportion="0.3030303" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/create_test.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="21" selection-start="1500" selection-end="1500" vertical-scroll-proportion="0.39567232">
-          <folding />
-        </state>
+        <state line="19" column="21" selection-start="1500" selection-end="1500" vertical-scroll-proportion="0.39567232" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AndroidManifest.out.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/colors.xml">
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="41" selection-start="385" selection-end="385" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/list_bg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="36" selection-start="378" selection-end="378" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="12" column="42" selection-start="673" selection-end="673" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/button_bg.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="17" selection-start="601" selection-end="601" vertical-scroll-proportion="0.0">
+        <state line="16" column="17" selection-start="601" selection-end="601" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/prasans/multichoice/activity/EnterChoicesScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="124" column="46" selection-start="4932" selection-end="4932" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/home.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="0" selection-start="1608" selection-end="1608" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/prasans/multichoice/activity/HomeScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="64" selection-start="751" selection-end="751" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/list_bg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="36" selection-start="378" selection-end="378" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="41" selection-start="385" selection-end="385" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gen/com/prasans/R.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="32" selection-start="1049" selection-end="1049" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/prasans/multichoice/activity/SplashScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="24" selection-start="532" selection-end="532" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/prasans/multichoice/activity/EnterChoicesScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="124" column="46" selection-start="4932" selection-end="4932" vertical-scroll-proportion="0.0">
+        <state line="15" column="84" selection-start="595" selection-end="595" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/splashscreen.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="41" selection-start="203" selection-end="203" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/prasans/multichoice/activity/HomeScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="64" selection-start="751" selection-end="751" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="42" selection-start="673" selection-end="673" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/home.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="1608" selection-end="1608" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gen/com/prasans/R.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="27" selection-start="2548" selection-end="2548" vertical-scroll-proportion="0.5776699">
+        <state line="8" column="44" selection-start="406" selection-end="406" vertical-scroll-proportion="0.31560892">
           <folding />
         </state>
       </provider>

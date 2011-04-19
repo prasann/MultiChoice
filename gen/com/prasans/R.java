@@ -34,6 +34,7 @@ public final class R {
         public static final int TextView01=0x7f070000;
         public static final int TextView02=0x7f070005;
         public static final int aboutBtn=0x7f07000d;
+        public static final int aboutTxt=0x7f070017;
         public static final int answerReceivedCount=0x7f070014;
         public static final int createBtn=0x7f07000a;
         public static final int imageView1=0x7f070016;
