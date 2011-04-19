@@ -134,6 +134,7 @@ public class EnterChoicesScreen extends Activity {
             public void onClick(DialogInterface dialogInterface, int i) {
                 Intent intent = new Intent(EnterChoicesScreen.this, HomeScreen.class);
                 startActivityForResult(intent, RESULT_FIRST_USER);
+                finish();
             }
         };
     }

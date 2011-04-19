@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:id="@+id/splash"
+        android:background="@drawable/darkaurora" android:orientation="vertical">
+   <ImageView android:id="@+id/imageView1"
+		android:src="@drawable/icon"
+		android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center_horizontal" android:layout_marginTop="20dp"/>
+    <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="A SMS based app that allows you to
+    store a set of choices and evaluates the response received as SMS and sends back the score for the sender and allows you to view the reporsts for specific tests." android:typeface="serif" android:textStyle="italic" android:layout_weight="1" android:layout_marginTop="25dp" android:textColor="@color/grey"/>
+    <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="Developed By: Prasanna N Venkatesan" android:textStyle="normal|bold" android:textColor="@color/white"/>
+</LinearLayout>

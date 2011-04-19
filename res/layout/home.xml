@@ -7,8 +7,15 @@
                   android:layout_width="match_parent" android:background="@drawable/header"/>
 
     <Button android:layout_marginLeft="50dp" android:id="@+id/createBtn" android:layout_width="200dp"
-            android:text="@string/createTestBtnLabel" android:layout_height="wrap_content" android:layout_marginTop="20dp"
+            android:text="@string/createTestBtnLabel" android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             />
     <Button android:layout_marginLeft="50dp" android:id="@+id/reportsBtn" android:layout_width="200dp"
-            android:text="@string/reportsBtnLabel" android:layout_height="wrap_content" android:layout_marginTop="20dp"/>
+            android:text="@string/reportsBtnLabel" android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"/>
+    <LinearLayout android:id="@+id/linearLayout2" android:layout_width="match_parent" android:layout_height="fill_parent" android:layout_weight="1"/>
+    <LinearLayout android:layout_height="wrap_content" android:layout_gravity="bottom" android:layout_width="fill_parent">
+        <LinearLayout android:id="@+id/linearLayout3" android:layout_height="match_parent" android:layout_width="fill_parent" android:layout_weight="1"/>
+       <ImageView android:layout_height="wrap_content" android:layout_width="wrap_content" android:src="@drawable/about" android:id="@+id/aboutBtn" android:clickable="true"/>
+    </LinearLayout>
 </LinearLayout>

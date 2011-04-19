@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import com.prasans.R;
 
 public class HomeScreen extends Activity {
@@ -17,6 +18,18 @@ public class HomeScreen extends Activity {
 
         Button reports = (Button) findViewById(R.id.reportsBtn);
         reports.setOnClickListener(reportsBtnClk());
+
+        ImageView imageView = (ImageView)findViewById(R.id.aboutBtn);
+        imageView.setOnClickListener(aboutBtnClk());
+    }
+
+    private View.OnClickListener aboutBtnClk() {
+        return new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), SplashScreen.class);
+                startActivityForResult(intent, RESULT_FIRST_USER);
+            }
+        };
     }
 
     private View.OnClickListener createTestBtnClk() {
