@@ -117,7 +117,7 @@ public class EnterChoicesScreen extends Activity {
         public void onClick(View view) {
             String answers = buildAnswers();
             if (answers.length() != radioGroupList.size()) {
-                displayAlert(EnterChoicesScreen.this, "Error", "Answers: "+answers + "RGL: " +radioGroupList.size(), null);
+                displayAlert(EnterChoicesScreen.this, "Error", "Make sure you have filled all the choices.", null);
                 return;
             }
             Bundle bundle = getIntent().getExtras();
