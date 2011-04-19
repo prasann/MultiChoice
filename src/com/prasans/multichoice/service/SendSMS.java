@@ -1,4 +1,4 @@
-package com.prasans.activity;
+package com.prasans.multichoice.service;
 
 import android.telephony.SmsManager;
 import android.util.Log;

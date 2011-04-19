@@ -1,15 +1,15 @@
-package com.prasans.activity;
+package com.prasans.multichoice.activity;
 
 import android.app.ListActivity;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.widget.TextView;
 import com.prasans.R;
-import com.prasans.adapter.ContactInfoAdapter;
-import com.prasans.adapter.ResultsDB;
-import com.prasans.adapter.ScoreInfoListAdapter;
-import com.prasans.domain.ScoreInfo;
-import com.prasans.utils.AppConstants;
+import com.prasans.multichoice.adapter.ContactInfoAdapter;
+import com.prasans.multichoice.adapter.ResultsDB;
+import com.prasans.multichoice.adapter.ScoreInfoListAdapter;
+import com.prasans.multichoice.domain.ScoreInfo;
+import com.prasans.multichoice.utils.AppConstants;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;

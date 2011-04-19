@@ -1,4 +1,4 @@
-package com.prasans.adapter;
+package com.prasans.multichoice.adapter;
 
 import android.content.Context;
 import android.database.Cursor;

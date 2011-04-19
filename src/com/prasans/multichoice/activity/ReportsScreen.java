@@ -1,4 +1,4 @@
-package com.prasans.activity;
+package com.prasans.multichoice.activity;
 
 import android.app.ListActivity;
 import android.content.Intent;
@@ -7,15 +7,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
 import com.prasans.R;
-import com.prasans.adapter.TestInfoDB;
-import com.prasans.adapter.TestInfoListAdapter;
-import com.prasans.domain.TestInfo;
+import com.prasans.multichoice.adapter.TestInfoDB;
+import com.prasans.multichoice.adapter.TestInfoListAdapter;
+import com.prasans.multichoice.domain.TestInfo;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.prasans.utils.AppConstants.TEST_CODE;
-import static com.prasans.utils.AppConstants.TEST_NAME;
+import static com.prasans.multichoice.utils.AppConstants.TEST_CODE;
+import static com.prasans.multichoice.utils.AppConstants.TEST_NAME;
 
 public class ReportsScreen extends ListActivity {
 

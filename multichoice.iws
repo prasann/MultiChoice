@@ -14,18 +14,34 @@
     <option name="historyRevisionsNumber" value="4" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="fa3993d4-51d3-4e73-aaf7-3171651ba09b" name="Default" comment="Made the test Code Case insensitive">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/custom_btn.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/list_bg.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/colors.xml" afterPath="$PROJECT_DIR$/res/values/colors.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/button_bg.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/styles.xml" afterPath="$PROJECT_DIR$/res/values/styles.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/report_list.xml" afterPath="$PROJECT_DIR$/res/layout/report_list.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/row_test_info.xml" afterPath="$PROJECT_DIR$/res/layout/row_test_info.xml" />
+    <list default="true" id="fa3993d4-51d3-4e73-aaf7-3171651ba09b" name="Default" comment="Made the test Code Case insensitive">
+      <change type="DELETED" beforePath="D:\multichoice\res\layout\custom_btn.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/multichoice.iml" afterPath="$PROJECT_DIR$/multichoice.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/multichoice.ipr" afterPath="$PROJECT_DIR$/multichoice.ipr" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/multichoice.iws" afterPath="$PROJECT_DIR$/multichoice.iws" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/button_bg.xml" afterPath="$PROJECT_DIR$/res/layout/button_bg.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/row_score.xml" afterPath="$PROJECT_DIR$/res/layout/row_score.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/home.xml" afterPath="$PROJECT_DIR$/res/layout/home.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/score_sheet.xml" afterPath="$PROJECT_DIR$/res/layout/score_sheet.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/colors.xml" afterPath="$PROJECT_DIR$/res/values/colors.xml" />
+      <change type="MOVED" beforePath="D:\multichoice\src\com\prasans\activity\DisplayScoreScreen.java" afterPath="$PROJECT_DIR$/src/com/prasans/multichoice/activity/DisplayScoreScreen.java" />
+      <change type="MOVED" beforePath="D:\multichoice\src\com\prasans\activity\EnterAnswersScreen.java" afterPath="$PROJECT_DIR$/src/com/prasans/multichoice/activity/EnterAnswersScreen.java" />
+      <change type="MOVED" beforePath="D:\multichoice\src\com\prasans\activity\EnterChoicesScreen.java" afterPath="$PROJECT_DIR$/src/com/prasans/multichoice/activity/EnterChoicesScreen.java" />
+      <change type="MOVED" beforePath="D:\multichoice\src\com\prasans\activity\EvaluateReceivedText.java" afterPath="$PROJECT_DIR$/src/com/prasans/multichoice/activity/EvaluateReceivedText.java" />
+      <change type="MOVED" beforePath="D:\multichoice\src\com\prasans\activity\HomeScreen.java" afterPath="$PROJECT_DIR$/src/com/prasans/multichoice/activity/HomeScreen.java" />
+      <change type="MOVED" beforePath="D:\multichoice\src\com\prasans\activity\ReportsScreen.java" afterPath="$PROJECT_DIR$/src/com/prasans/multichoice/activity/ReportsScreen.java" />
+      <change type="MOVED" beforePath="D:\multichoice\src\com\prasans\activity\SMSMonitor.java" afterPath="$PROJECT_DIR$/src/com/prasans/multichoice/service/SMSMonitor.java" />
+      <change type="MOVED" beforePath="D:\multichoice\src\com\prasans\activity\SendSMS.java" afterPath="$PROJECT_DIR$/src/com/prasans/multichoice/service/SendSMS.java" />
+      <change type="MOVED" beforePath="D:\multichoice\src\com\prasans\activity\TestInfoEntryScreen.java" afterPath="$PROJECT_DIR$/src/com/prasans/multichoice/activity/TestInfoEntryScreen.java" />
+      <change type="MOVED" beforePath="D:\multichoice\src\com\prasans\adapter\BaseDB.java" afterPath="$PROJECT_DIR$/src/com/prasans/multichoice/adapter/BaseDB.java" />
+      <change type="MOVED" beforePath="D:\multichoice\src\com\prasans\adapter\ContactInfoAdapter.java" afterPath="$PROJECT_DIR$/src/com/prasans/multichoice/adapter/ContactInfoAdapter.java" />
+      <change type="MOVED" beforePath="D:\multichoice\src\com\prasans\adapter\ResultsDB.java" afterPath="$PROJECT_DIR$/src/com/prasans/multichoice/adapter/ResultsDB.java" />
+      <change type="MOVED" beforePath="D:\multichoice\src\com\prasans\adapter\ScoreInfoListAdapter.java" afterPath="$PROJECT_DIR$/src/com/prasans/multichoice/adapter/ScoreInfoListAdapter.java" />
+      <change type="MOVED" beforePath="D:\multichoice\src\com\prasans\adapter\TestInfoDB.java" afterPath="$PROJECT_DIR$/src/com/prasans/multichoice/adapter/TestInfoDB.java" />
+      <change type="MOVED" beforePath="D:\multichoice\src\com\prasans\adapter\TestInfoListAdapter.java" afterPath="$PROJECT_DIR$/src/com/prasans/multichoice/adapter/TestInfoListAdapter.java" />
+      <change type="MOVED" beforePath="D:\multichoice\src\com\prasans\domain\ScoreInfo.java" afterPath="$PROJECT_DIR$/src/com/prasans/multichoice/domain/ScoreInfo.java" />
+      <change type="MOVED" beforePath="D:\multichoice\src\com\prasans\domain\TestInfo.java" afterPath="$PROJECT_DIR$/src/com/prasans/multichoice/domain/TestInfo.java" />
+      <change type="MOVED" beforePath="D:\multichoice\src\com\prasans\utils\AppConstants.java" afterPath="$PROJECT_DIR$/src/com/prasans/multichoice/utils/AppConstants.java" />
+      <change type="MOVED" beforePath="D:\multichoice\src\com\prasans\utils\Commons.java" afterPath="$PROJECT_DIR$/src/com/prasans/multichoice/utils/Commons.java" />
     </list>
     <list id="4b554f7a-f2da-4eca-b238-c5ac2ace944a" name="ignore.on.commit" comment="ignore.on.commit" />
     <ignored path=".idea/workspace.xml" />
@@ -37,6 +53,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CoverageDataManager" choice="3" />
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
     <option name="REVERSE_PATCH" value="false" />
@@ -46,7 +63,7 @@
   </component>
   <component name="DebuggerManager">
     <line_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/prasans/adapter/ResultsDB.java" line="35" class="com.prasans.adapter.ResultsDB" package="com.prasans.adapter">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/prasans/multichoice/adapter/ResultsDB.java" line="34" class="com.prasans.adapter.ResultsDB" package="com.prasans.adapter">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -59,7 +76,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/prasans/activity/EnterChoicesScreen.java" line="118" class="com.prasans.activity.EnterChoicesScreen$1" package="com.prasans.activity">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/prasans/multichoice/activity/EnterChoicesScreen.java" line="118" class="com.prasans.activity.EnterChoicesScreen$1" package="com.prasans.activity">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -111,13 +128,21 @@
   <component name="FavoritesManager">
     <favorites_list name="multichoice" />
   </component>
-  <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="styles.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="57" selection-start="508" selection-end="517" vertical-scroll-proportion="0.0">
+            <state line="15" column="16" selection-start="870" selection-end="870" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="button_bg.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/res/layout/button_bg.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="17" selection-start="413" selection-end="413" vertical-scroll-proportion="0.34395972">
               <folding />
             </state>
           </provider>
@@ -126,25 +151,7 @@
       <file leaf-file-name="list_bg.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/layout/list_bg.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="27" selection-start="321" selection-end="328" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="custom_btn.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/res/layout/custom_btn.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="22" selection-start="716" selection-end="716" vertical-scroll-proportion="0.7066052">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="report_list.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/report_list.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="16" selection-start="222" selection-end="222" vertical-scroll-proportion="0.0">
+            <state line="8" column="36" selection-start="378" selection-end="378" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -153,7 +160,7 @@
       <file leaf-file-name="colors.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/values/colors.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="0" selection-start="96" selection-end="96" vertical-scroll-proportion="0.0">
+            <state line="9" column="41" selection-start="385" selection-end="385" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -162,43 +169,7 @@
       <file leaf-file-name="R.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gen/com/prasans/R.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="32" selection-start="793" selection-end="793" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="button_bg.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/button_bg.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="53" selection-start="149" selection-end="149" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="row_test_info.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/row_test_info.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="20" selection-start="575" selection-end="575" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="create_test.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/create_test.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="21" selection-start="1500" selection-end="1500" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/home.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="20" selection-start="480" selection-end="480" vertical-scroll-proportion="0.0">
+            <state line="14" column="32" selection-start="390" selection-end="390" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -212,8 +183,8 @@
     </FindUsagesManager>
   </component>
   <component name="Git.Settings">
-    <option name="GIT_EXECUTABLE" value="C:\Program Files\Git\bin\git.exe" />
     <option name="CHECKOUT_INCLUDE_TAGS" value="false" />
+    <option name="UPDATE_CHANGES_POLICY" value="STASH" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
@@ -221,7 +192,6 @@
         <option value="$PROJECT_DIR$/src/com/prasans/activity/TestInfoEntryScreen.java" />
         <option value="$PROJECT_DIR$/src/com/prasans/activity/EnterChoicesScreen.java" />
         <option value="$PROJECT_DIR$/src/com/prasans/activity/EvaluateReceivedText.java" />
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/res/layout/create_test.xml" />
         <option value="$PROJECT_DIR$/res/layout/list-bg.xml" />
         <option value="$PROJECT_DIR$/res/layout/score_sheet.xml" />
@@ -229,11 +199,12 @@
         <option value="$PROJECT_DIR$/res/layout/report_list.xml" />
         <option value="$PROJECT_DIR$/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/res/layout/home.xml" />
-        <option value="$PROJECT_DIR$/res/layout/button_bg.xml" />
         <option value="$PROJECT_DIR$/gen/com/prasans/R.java" />
         <option value="$PROJECT_DIR$/res/layout/row_test_info.xml" />
-        <option value="$PROJECT_DIR$/res/values/colors.xml" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/res/layout/custom_btn.xml" />
+        <option value="$PROJECT_DIR$/res/layout/button_bg.xml" />
+        <option value="$PROJECT_DIR$/res/values/colors.xml" />
       </list>
     </option>
   </component>
@@ -253,7 +224,7 @@
       <profile-state />
     </entry>
   </component>
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -280,8 +251,6 @@
     </navigator>
     <panes>
       <pane id="Favorites" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -314,29 +283,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="prasans" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
               <option name="myItemId" value="multichoice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="multichoice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prasans" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="adapter" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -351,10 +298,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="values" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -376,22 +319,10 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="multichoice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="multichoice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -447,6 +378,7 @@
       <module name="multichoice" />
       <option name="ACTIVITY_CLASS" value="com.prasans.activity.HomeScreen" />
       <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
       <option name="CHOOSE_DEVICE_MANUALLY" value="false" />
       <option name="PREFERRED_AVD" value="Emulator1" />
       <option name="COMMAND_LINE" value="" />
@@ -497,7 +429,6 @@
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" />
-      <extension name="snapshooter" />
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -549,7 +480,6 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" />
-      <extension name="snapshooter" />
       <option name="MAIN_CLASS_NAME" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
@@ -570,7 +500,6 @@
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" />
-      <extension name="snapshooter" />
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -587,6 +516,7 @@
         <value defaultName="moduleWithDependencies" />
       </option>
       <envs />
+      <patterns />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -598,6 +528,7 @@
       <module name="" />
       <option name="ACTIVITY_CLASS" value="" />
       <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
       <option name="CHOOSE_DEVICE_MANUALLY" value="false" />
       <option name="PREFERRED_AVD" value="" />
       <option name="COMMAND_LINE" value="" />
@@ -617,6 +548,7 @@
       <module name="multichoice" />
       <option name="ACTIVITY_CLASS" value="com.prasans.activity.HomeScreen" />
       <option name="MODE" value="specific_activity" />
+      <option name="DEPLOY" value="true" />
       <option name="CHOOSE_DEVICE_MANUALLY" value="false" />
       <option name="PREFERRED_AVD" value="" />
       <option name="COMMAND_LINE" value="" />
@@ -654,7 +586,6 @@
     <option name="USER" value="" />
     <option name="PASSWORD" value="" />
     <option name="LAST_MERGED_REVISION" />
-    <option name="UPDATE_RUN_STATUS" value="false" />
     <option name="MERGE_DRY_RUN" value="false" />
     <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
     <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
@@ -663,6 +594,7 @@
     <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
     <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
     <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
     <configuration useDefault="true">C:\Users\prasann\AppData\Roaming\Subversion</configuration>
     <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
     <supportedVersion>125</supportedVersion>
@@ -698,30 +630,30 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1170" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1170" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32910156" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32846004" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32910156" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39941406" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32910156" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32910156" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="ConsoleMavenPlugin" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32846004" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32910156" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959914" sideWeight="0.22460938" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33814102" sideWeight="0.6091618" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32977018" sideWeight="0.6640625" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39160156" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3908382" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Android Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3232422" sideWeight="0.0" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="91" y="91" width="1738" height="970" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32910156" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="ConsoleMavenPlugin" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3998045" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -738,6 +670,8 @@
     <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="false" />
     <option name="ENABLE_BACKGROUND_PROCESSES" value="false" />
     <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
+    <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
+    <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="LAST_COMMIT_MESSAGE" value="Made the test Code Case insensitive" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
@@ -786,24 +720,14 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/prasans/activity/EnterChoicesScreen.java">
+    <entry file="file://$PROJECT_DIR$/src/com/prasans/multichoice/activity/EnterChoicesScreen.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="121" column="56" selection-start="4701" selection-end="4701" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/prasans/activity/SMSMonitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="33" selection-start="1384" selection-end="1384" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/prasans/activity/EvaluateReceivedText.java">
+    <entry file="file://$PROJECT_DIR$/src/com/prasans/multichoice/activity/EvaluateReceivedText.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="43" column="17" selection-start="1556" selection-end="1556" vertical-scroll-proportion="0.51758796" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="41" selection-start="258" selection-end="258" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/row_score.xml">
@@ -816,70 +740,84 @@
         <state line="25" column="12" selection-start="1658" selection-end="1658" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/create_test.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="21" selection-start="1500" selection-end="1500" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/home.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="20" selection-start="480" selection-end="480" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="57" selection-start="508" selection-end="517" vertical-scroll-proportion="0.0">
+        <state line="9" column="57" selection-start="508" selection-end="517" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/report_list.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="5" selection-start="44" selection-end="44" vertical-scroll-proportion="0.034848485">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/list_bg.xml">
+    <entry file="jar://D:/android-sdk-windows/platforms/android-8/android.jar!/android/widget/LinearLayout.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="27" selection-start="321" selection-end="328" vertical-scroll-proportion="0.0">
+        <state line="6" column="13" selection-start="191" selection-end="191" vertical-scroll-proportion="0.036977492">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/row_test_info.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="20" selection-start="575" selection-end="575" vertical-scroll-proportion="0.0">
+        <state line="13" column="20" selection-start="575" selection-end="575" vertical-scroll-proportion="0.3030303">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/button_bg.xml">
+    <entry file="file://$PROJECT_DIR$/res/layout/create_test.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="53" selection-start="149" selection-end="149" vertical-scroll-proportion="0.0">
+        <state line="19" column="21" selection-start="1500" selection-end="1500" vertical-scroll-proportion="0.39567232">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/home.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="20" selection-start="480" selection-end="480" vertical-scroll-proportion="0.24884081">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.out.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="16" selection-start="870" selection-end="870" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gen/com/prasans/R.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="32" selection-start="793" selection-end="793" vertical-scroll-proportion="0.0">
+        <state line="14" column="32" selection-start="390" selection-end="390" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/values/colors.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="96" selection-end="96" vertical-scroll-proportion="0.0">
+        <state line="9" column="41" selection-start="385" selection-end="385" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/report_list.xml">
+    <entry file="file://$PROJECT_DIR$/res/layout/list_bg.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="16" selection-start="222" selection-end="222" vertical-scroll-proportion="0.0">
+        <state line="8" column="36" selection-start="378" selection-end="378" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/custom_btn.xml">
+    <entry file="file://$PROJECT_DIR$/res/layout/button_bg.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="22" selection-start="716" selection-end="716" vertical-scroll-proportion="0.7066052">
+        <state line="11" column="17" selection-start="413" selection-end="413" vertical-scroll-proportion="0.34395972">
           <folding />
         </state>
       </provider>

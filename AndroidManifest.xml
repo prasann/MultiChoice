@@ -3,18 +3,18 @@
           package="com.prasans">
     <application android:icon="@drawable/icon" android:label="Multi Choice"
                  android:theme="@style/MyTheme">
-        <activity android:name=".activity.HomeScreen">
+        <activity android:name=".multichoice.activity.HomeScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".activity.TestInfoEntryScreen"/>
-        <activity android:name=".activity.EnterAnswersScreen"/>
-        <activity android:name=".activity.ReportsScreen"/>
-        <activity android:name=".activity.DisplayScoreScreen"/>
-        <activity android:name=".activity.EnterChoicesScreen"/>
-        <receiver android:name=".activity.SMSMonitor">
+        <activity android:name=".multichoice.activity.TestInfoEntryScreen"/>
+        <activity android:name=".multichoice.activity.EnterAnswersScreen"/>
+        <activity android:name=".multichoice.activity.ReportsScreen"/>
+        <activity android:name=".multichoice.activity.DisplayScoreScreen"/>
+        <activity android:name=".multichoice.activity.EnterChoicesScreen"/>
+        <receiver android:name=".multichoice.service.SMSMonitor">
             <intent-filter>
                 <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
             </intent-filter>

@@ -1,4 +1,4 @@
-package com.prasans.utils;
+package com.prasans.multichoice.utils;
 
 public class AppConstants {
     public static final String TEST_NAME = "TestName";

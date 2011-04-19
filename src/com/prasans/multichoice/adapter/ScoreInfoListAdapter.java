@@ -1,4 +1,4 @@
-package com.prasans.adapter;
+package com.prasans.multichoice.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import com.prasans.R;
-import com.prasans.domain.ScoreInfo;
+import com.prasans.multichoice.domain.ScoreInfo;
 
 import java.util.List;
 

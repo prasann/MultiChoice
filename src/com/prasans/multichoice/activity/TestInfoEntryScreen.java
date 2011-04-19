@@ -1,4 +1,4 @@
-package com.prasans.activity;
+package com.prasans.multichoice.activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -11,12 +11,12 @@ import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 import com.prasans.R;
-import com.prasans.adapter.TestInfoDB;
+import com.prasans.multichoice.adapter.TestInfoDB;
 
-import static com.prasans.utils.AppConstants.COUNT;
-import static com.prasans.utils.AppConstants.TEST_CODE;
-import static com.prasans.utils.AppConstants.TEST_NAME;
-import static com.prasans.utils.Commons.displayAlert;
+import static com.prasans.multichoice.utils.AppConstants.COUNT;
+import static com.prasans.multichoice.utils.AppConstants.TEST_CODE;
+import static com.prasans.multichoice.utils.AppConstants.TEST_NAME;
+import static com.prasans.multichoice.utils.Commons.displayAlert;
 import static java.lang.Integer.parseInt;
 
 public class TestInfoEntryScreen extends Activity {

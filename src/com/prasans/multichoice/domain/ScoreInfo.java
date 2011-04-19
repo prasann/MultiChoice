@@ -1,4 +1,4 @@
-package com.prasans.domain;
+package com.prasans.multichoice.domain;
 
 public class ScoreInfo {
     private String phoneNumber;

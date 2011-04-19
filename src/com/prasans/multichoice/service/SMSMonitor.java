@@ -1,4 +1,6 @@
-package com.prasans.activity;
+package com.prasans.multichoice.service;
+
+import com.prasans.multichoice.activity.EvaluateReceivedText;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

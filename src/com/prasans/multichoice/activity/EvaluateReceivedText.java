@@ -1,13 +1,14 @@
-package com.prasans.activity;
+package com.prasans.multichoice.activity;
 
 import android.content.Context;
 import android.database.Cursor;
 import android.os.AsyncTask;
 import android.util.Log;
-import com.prasans.adapter.ResultsDB;
-import com.prasans.adapter.TestInfoDB;
+import com.prasans.multichoice.adapter.ResultsDB;
+import com.prasans.multichoice.adapter.TestInfoDB;
+import com.prasans.multichoice.service.SendSMS;
 
-import static com.prasans.adapter.TestInfoDB.ANSWERS;
+import static com.prasans.multichoice.adapter.TestInfoDB.ANSWERS;
 
 public class EvaluateReceivedText extends AsyncTask<Void, Void, Void> {
     private TestInfoDB testInfoDB;

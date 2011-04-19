@@ -1,4 +1,4 @@
-package com.prasans.utils;
+package com.prasans.multichoice.utils;
 
 import android.app.AlertDialog;
 import android.content.Context;

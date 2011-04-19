@@ -1,4 +1,4 @@
-package com.prasans.activity;
+package com.prasans.multichoice.activity;
 
 import android.app.Activity;
 import android.content.DialogInterface;
@@ -13,7 +13,7 @@ import android.widget.ScrollView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
-import com.prasans.adapter.TestInfoDB;
+import com.prasans.multichoice.adapter.TestInfoDB;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,10 +21,10 @@ import java.util.List;
 import static android.view.ViewGroup.LayoutParams.FILL_PARENT;
 import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
 import static android.widget.LinearLayout.VERTICAL;
-import static com.prasans.utils.AppConstants.COUNT;
-import static com.prasans.utils.AppConstants.TEST_CODE;
-import static com.prasans.utils.AppConstants.TEST_NAME;
-import static com.prasans.utils.Commons.displayAlert;
+import static com.prasans.multichoice.utils.AppConstants.COUNT;
+import static com.prasans.multichoice.utils.AppConstants.TEST_CODE;
+import static com.prasans.multichoice.utils.AppConstants.TEST_NAME;
+import static com.prasans.multichoice.utils.Commons.displayAlert;
 
 public class EnterAnswersScreen extends Activity {
     private TestInfoDB testInfoDB;

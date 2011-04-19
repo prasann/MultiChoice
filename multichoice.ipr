@@ -89,6 +89,18 @@
     <entry_points version="2.0" />
   </component>
   <component name="IdProvider" IDEtalkID="B93675040E629FC9B18D2C3FB2ECA95E" />
+  <component name="InspectionProjectProfileManager">
+    <profiles>
+      <profile version="1.0" is_locked="false">
+        <option name="myName" value="Project Default" />
+        <option name="myLocal" value="false" />
+        <inspection_tool class="AndroidDomInspection" enabled="false" level="ERROR" enabled_by_default="false" />
+      </profile>
+    </profiles>
+    <option name="PROJECT_PROFILE" value="Project Default" />
+    <option name="USE_PROJECT_PROFILE" value="true" />
+    <version value="1.0" />
+  </component>
   <component name="JavadocGenerationManager">
     <option name="OUTPUT_DIRECTORY" />
     <option name="OPTION_SCOPE" value="protected" />
@@ -234,6 +246,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/multichoice.iml" filepath="$PROJECT_DIR$/multichoice.iml" />
     </modules>
+  </component>
+  <component name="ProjectResources">
+    <default-html-doctype>http://www.w3.org/1999/xhtml</default-html-doctype>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_5" assert-keyword="true" jdk-15="true" project-jdk-name="1.6" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />

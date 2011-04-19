@@ -1,4 +1,4 @@
-package com.prasans.activity;
+package com.prasans.multichoice.activity;
 
 import android.app.Activity;
 import android.content.Intent;

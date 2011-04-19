@@ -7,7 +7,7 @@
     <color name="orange2">#FF6600</color>
     <color name="blue1">#99CCFF</color>
     <color name="blue2">#0033CC</color>
+    <color name="blue3">#ff3399ff</color>
     <color name="grey">#736F6E</color>
-    <color name="grey1">#55FFFFFF</color>
     <color name="grey2">#44636363</color>
 </resources>
