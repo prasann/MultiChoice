@@ -14,11 +14,10 @@
     <option name="historyRevisionsNumber" value="4" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa3993d4-51d3-4e73-aaf7-3171651ba09b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/com/prasans/R.java" afterPath="$PROJECT_DIR$/gen/com/prasans/R.java" />
+    <list default="true" id="fa3993d4-51d3-4e73-aaf7-3171651ba09b" name="Default" comment="Did some UI tweaks to the splash screen">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/multichoice.iws" afterPath="$PROJECT_DIR$/multichoice.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/splashscreen.xml" afterPath="$PROJECT_DIR$/res/layout/splashscreen.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/prasans/multichoice/activity/SplashScreen.java" afterPath="$PROJECT_DIR$/src/com/prasans/multichoice/activity/SplashScreen.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/prasans/multichoice/adapter/TestInfoListAdapter.java" afterPath="$PROJECT_DIR$/src/com/prasans/multichoice/adapter/TestInfoListAdapter.java" />
     </list>
     <list id="4b554f7a-f2da-4eca-b238-c5ac2ace944a" name="ignore.on.commit" comment="ignore.on.commit" />
     <ignored path=".idea/workspace.xml" />
@@ -107,15 +106,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="42" selection-start="673" selection-end="673" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="button_bg.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/layout/button_bg.xml">
           <provider selected="true" editor-type-id="text-editor">
@@ -128,7 +118,16 @@
       <file leaf-file-name="SplashScreen.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/prasans/multichoice/activity/SplashScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="84" selection-start="595" selection-end="595" vertical-scroll-proportion="0.0">
+            <state line="17" column="35" selection-start="733" selection-end="733" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestInfoListAdapter.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/prasans/multichoice/adapter/TestInfoListAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="89" selection-start="1067" selection-end="1067" vertical-scroll-proportion="0.26818183">
               <folding />
             </state>
           </provider>
@@ -143,10 +142,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="splashscreen.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="splashscreen.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/layout/splashscreen.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="44" selection-start="406" selection-end="406" vertical-scroll-proportion="0.31560892">
+            <state line="12" column="62" selection-start="1051" selection-end="1051" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -211,7 +210,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/res/layout/list-bg.xml" />
         <option value="$PROJECT_DIR$/res/layout/score_sheet.xml" />
         <option value="$PROJECT_DIR$/res/layout/row_score.xml" />
         <option value="$PROJECT_DIR$/res/layout/report_list.xml" />
@@ -225,8 +223,9 @@
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/res/layout/home.xml" />
         <option value="$PROJECT_DIR$/gen/com/prasans/R.java" />
-        <option value="$PROJECT_DIR$/src/com/prasans/multichoice/activity/SplashScreen.java" />
         <option value="$PROJECT_DIR$/res/layout/splashscreen.xml" />
+        <option value="$PROJECT_DIR$/src/com/prasans/multichoice/activity/SplashScreen.java" />
+        <option value="$PROJECT_DIR$/src/com/prasans/multichoice/adapter/TestInfoListAdapter.java" />
       </list>
     </option>
   </component>
@@ -679,6 +678,7 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5701754" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32846004" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39941406" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32910156" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -688,12 +688,11 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33814102" sideWeight="0.6091618" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3908382" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3908382" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Android Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3232422" sideWeight="0.0" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="91" y="91" width="1738" height="970" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32910156" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="ConsoleMavenPlugin" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -717,7 +716,7 @@
     <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modified UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Did some UI tweaks to the splash screen" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -730,7 +729,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Completed the Loop of Enter Answer and HomeScreen" />
     <MESSAGE value="Added Score computation logic" />
     <MESSAGE value="Refactored the code" />
     <MESSAGE value="Refactored the DB classes" />
@@ -755,6 +753,7 @@
     <MESSAGE value="Made the test Code Case insensitive" />
     <MESSAGE value="Refactored packages" />
     <MESSAGE value="Modified UI" />
+    <MESSAGE value="Did some UI tweaks to the splash screen" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -764,11 +763,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="57" selection-start="508" selection-end="517" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/report_list.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="5" selection-start="44" selection-end="44" vertical-scroll-proportion="0.034848485" />
@@ -836,16 +830,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/prasans/multichoice/activity/SplashScreen.java">
+    <entry file="file://$PROJECT_DIR$/res/layout/splashscreen.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="84" selection-start="595" selection-end="595" vertical-scroll-proportion="0.0">
+        <state line="12" column="62" selection-start="1051" selection-end="1051" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/splashscreen.xml">
+    <entry file="file://$PROJECT_DIR$/src/com/prasans/multichoice/activity/SplashScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="44" selection-start="406" selection-end="406" vertical-scroll-proportion="0.31560892">
+        <state line="17" column="35" selection-start="733" selection-end="733" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/prasans/multichoice/adapter/TestInfoListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="89" selection-start="1067" selection-end="1067" vertical-scroll-proportion="0.26818183">
           <folding />
         </state>
       </provider>

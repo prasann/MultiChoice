@@ -37,7 +37,7 @@ public class TestInfoListAdapter extends ArrayAdapter<TestInfo> {
             TextView testName = (TextView) view.findViewById(R.id.text_testName);
             TextView testCode = (TextView) view.findViewById(R.id.text_testCode);
             if (testCode != null) {
-                testCode.setText("Code: " + testInfo.getTestCode());
+                testCode.setText("Test-Code: " + testInfo.getTestCode());
             }
             if (testName != null) {
                 testName.setText(testInfo.getTestName());

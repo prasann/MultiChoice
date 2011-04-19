@@ -14,9 +14,9 @@ public class SplashScreen extends Activity {
         LinearLayout parent = (LinearLayout) findViewById(R.id.splash);
         TextView about = (TextView)findViewById(R.id.aboutTxt);
         StringBuilder aboutText = new StringBuilder();
-        aboutText.append("A SMS Based application to conduct a multiple choice tests/contests.\n");
-        aboutText.append("Allows you to store a set of choices for a specific test and monitors your incoming SMSes for the answer pattern. \n");
-        aboutText.append("Whenever an answer pattern matches evaluates the answer and sends back the score to the Sender.\n");
+        aboutText.append("A SMS Based application to conduct a multiple choice tests/contests.\n\n");
+        aboutText.append("Allows you to store a set of choices for a specific test and monitors your incoming SMSes for the answer pattern. ");
+        aboutText.append("Whenever an answer pattern matches evaluates the answer and sends back the score to the Sender. ");
         aboutText.append("Also you can view the reports summary for your created tests/contests.");
         about.setText(aboutText);
 
