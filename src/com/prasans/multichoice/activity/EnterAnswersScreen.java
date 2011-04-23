@@ -71,7 +71,7 @@ public class EnterAnswersScreen extends Activity {
             String testName = bundle.getString(TEST_NAME);
             String testCode = bundle.getString(TEST_CODE);
             int count = bundle.getInt(COUNT);
-            testInfoDB.createTestEntry(testName, testCode, count, answers);
+//            testInfoDB.createTestEntry(testName, testCode, count, answers);
             displayAlert(EnterAnswersScreen.this, "Success", "All the details stored successfully", proceedToHomeScreen());
         }
     };

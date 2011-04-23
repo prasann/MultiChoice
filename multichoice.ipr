@@ -88,6 +88,19 @@
   <component name="EntryPointsManager">
     <entry_points version="2.0" />
   </component>
+  <component name="FacetAutodetectingManager">
+    <autodetection-disabled>
+      <facet-type id="android">
+        <modules>
+          <module name="wheel">
+            <files>
+              <file url="file://D:/android-wheel/wheel/AndroidManifest.xml" />
+            </files>
+          </module>
+        </modules>
+      </facet-type>
+    </autodetection-disabled>
+  </component>
   <component name="IdProvider" IDEtalkID="B93675040E629FC9B18D2C3FB2ECA95E" />
   <component name="InspectionProjectProfileManager">
     <profiles>
@@ -309,6 +322,22 @@
     <doccer class="nl.piraya.ideadoc.doccer.DoccerForPrivateDefaultConstructor" enabled="true">
       <template>/**$s$Do$s$not$s$instantiate$s$${CLASS_NAME}.$s$*/</template>
     </doccer>
+  </component>
+  <component name="libraryTable">
+    <library name="multichoice">
+      <CLASSES>
+        <root url="file://$PROJECT_DIR$/libs" />
+        <root url="file://$PROJECT_DIR$/libs" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+      <jarDirectory url="file://$PROJECT_DIR$/libs" recursive="false" />
+    </library>
+    <library name="wheel">
+      <CLASSES />
+      <JAVADOC />
+      <SOURCES />
+    </library>
   </component>
 </project>
 

@@ -24,7 +24,7 @@ import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
 import static android.widget.LinearLayout.HORIZONTAL;
 import static android.widget.LinearLayout.VERTICAL;
 import static com.prasans.multichoice.utils.AppConstants.COUNT;
-import static com.prasans.multichoice.utils.AppConstants.TEST_CODE;
+import static com.prasans.multichoice.utils.AppConstants.*;
 import static com.prasans.multichoice.utils.AppConstants.TEST_NAME;
 import static com.prasans.multichoice.utils.Commons.displayAlert;
 import static java.lang.String.valueOf;
@@ -123,8 +123,10 @@ public class EnterChoicesScreen extends Activity {
             Bundle bundle = getIntent().getExtras();
             String testName = bundle.getString(TEST_NAME);
             String testCode = bundle.getString(TEST_CODE).toLowerCase();
+            int wrongAnswers = bundle.getInt(WRONG_ANSWER_SCORE);
+            int correctAnswers = bundle.getInt(CORRECT_ANSWER_SCORE);
             int count = bundle.getInt(COUNT);
-            testInfoDB.createTestEntry(testName, testCode, count, answers);
+            testInfoDB.createTestEntry(testName, testCode, count, answers,wrongAnswers,correctAnswers);
             displayAlert(EnterChoicesScreen.this, "Success", "All the details stored successfully", proceedToHomeScreen());
         }
     };

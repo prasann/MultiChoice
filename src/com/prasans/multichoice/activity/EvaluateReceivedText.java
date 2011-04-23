@@ -8,7 +8,7 @@ import com.prasans.multichoice.adapter.ResultsDB;
 import com.prasans.multichoice.adapter.TestInfoDB;
 import com.prasans.multichoice.service.SendSMS;
 
-import static com.prasans.multichoice.adapter.TestInfoDB.ANSWERS;
+import static com.prasans.multichoice.adapter.TestInfoDB.*;
 
 public class EvaluateReceivedText extends AsyncTask<Void, Void, Void> {
     private TestInfoDB testInfoDB;
@@ -16,6 +16,8 @@ public class EvaluateReceivedText extends AsyncTask<Void, Void, Void> {
     private String phoneNumber;
     private String message;
     private long receivedAt;
+    private int wrongAnswerScore;
+    private int correctAnswerScore;
 
     public EvaluateReceivedText(String phoneNumber, String message, long receivedAt, Context context) {
         this.phoneNumber = phoneNumber;
@@ -45,7 +47,7 @@ public class EvaluateReceivedText extends AsyncTask<Void, Void, Void> {
     }
 
     private void persistScoreInDb(String testCode, int score, int totalCount) {
-        resultsDB.createTestEntry(testCode, phoneNumber, message, receivedAt, score, totalCount);
+        resultsDB.createTestEntry(testCode, phoneNumber, message, receivedAt, score, totalCount*correctAnswerScore);
     }
 
     private int calculateScore(String userAnswer, String answersFromDb) {
@@ -54,8 +56,13 @@ public class EvaluateReceivedText extends AsyncTask<Void, Void, Void> {
         answersFromDb = answersFromDb.substring(0, shortAnswer.length());
         int score = 0;
         for (int i = 0; i < shortAnswer.length(); i++) {
-            if (userAnswer.charAt(i) == answersFromDb.charAt(i))
-                score++;
+        	if(userAnswer.charAt(i) == 'X' ||userAnswer.charAt(i) == 'x'){
+        		continue;
+        	}else if (userAnswer.charAt(i) == answersFromDb.charAt(i)){
+        		score = score+correctAnswerScore;
+        	}else{
+        		score = score + wrongAnswerScore;
+        	}
         }
         return score;
     }
@@ -67,6 +74,8 @@ public class EvaluateReceivedText extends AsyncTask<Void, Void, Void> {
             for (; !cursor.isAfterLast(); cursor.moveToNext()) {
                 if (cursor.getInt(cursor.getColumnIndex(TestInfoDB.OPEN)) == 1) {
                     answer = cursor.getString(cursor.getColumnIndex(ANSWERS));
+                    wrongAnswerScore = cursor.getInt(cursor.getColumnIndex(WRONG_ANSWERS_SCORE));
+                    correctAnswerScore = cursor.getInt(cursor.getColumnIndex(CORRECT_ANSWERS_SCORE));
                     break;
                 }
             }

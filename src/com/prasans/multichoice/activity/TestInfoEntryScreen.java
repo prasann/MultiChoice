@@ -1,5 +1,7 @@
 package com.prasans.multichoice.activity;
 
+import kankan.wheel.widget.WheelView;
+import kankan.wheel.widget.adapters.NumericWheelAdapter;
 import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
@@ -13,14 +15,16 @@ import android.widget.TextView;
 import com.prasans.R;
 import com.prasans.multichoice.adapter.TestInfoDB;
 
-import static com.prasans.multichoice.utils.AppConstants.COUNT;
-import static com.prasans.multichoice.utils.AppConstants.TEST_CODE;
-import static com.prasans.multichoice.utils.AppConstants.TEST_NAME;
+import static com.prasans.multichoice.utils.AppConstants.*;
 import static com.prasans.multichoice.utils.Commons.displayAlert;
 import static java.lang.Integer.parseInt;
 
 public class TestInfoEntryScreen extends Activity {
     private TestInfoDB testInfoDB;
+    private WheelView wrongAnswers;
+    private WheelView correctAnswers;
+    private NumericWheelAdapter wrongAnswersAdapter;
+    private NumericWheelAdapter correctAnswersAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,10 +33,14 @@ public class TestInfoEntryScreen extends Activity {
         Button button = (Button) findViewById(R.id.quesBtn);
         button.setOnClickListener(buttonListener());
         testInfoDB = new TestInfoDB(this);
+        seekBarForQuesCount();
+        setWheelAdapters();
+    }
+
+	private void seekBarForQuesCount() {
+		SeekBar questSeekBar = (SeekBar) findViewById(R.id.questSeek);
         
-        SeekBar questSeekBar = (SeekBar) findViewById(R.id.questSeek);
-        questSeekBar.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
-			
+        questSeekBar.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {	
 			public void onStopTrackingTouch(SeekBar arg0) {
 			}
 			
@@ -43,7 +51,19 @@ public class TestInfoEntryScreen extends Activity {
 				((TextView) TestInfoEntryScreen.this.findViewById(R.id.questCount)).setText(String.valueOf(progress+1));
 			}
 		});
-    }
+	}
+
+	private void setWheelAdapters() {
+		wrongAnswers = (WheelView) findViewById(R.id.wrongAnswers);
+        wrongAnswersAdapter = new NumericWheelAdapter(this,-5,0);
+		wrongAnswers.setViewAdapter(wrongAnswersAdapter);
+		wrongAnswers.setCurrentItem(5);
+		
+		correctAnswers = (WheelView) findViewById(R.id.correctAnswers);
+		correctAnswersAdapter = new NumericWheelAdapter(this,0,5);
+		correctAnswers.setViewAdapter(correctAnswersAdapter);
+		correctAnswers.setCurrentItem(1);
+	}
 
     private View.OnClickListener buttonListener() {
         return new View.OnClickListener() {
@@ -77,6 +97,8 @@ public class TestInfoEntryScreen extends Activity {
         bundle.putString(TEST_NAME, testName);
         bundle.putInt(COUNT, parseInt(quesCount));
         bundle.putString(TEST_CODE, testCode);
+        bundle.putInt(WRONG_ANSWER_SCORE,Integer.valueOf(String.valueOf(wrongAnswersAdapter.getItemText(wrongAnswers.getCurrentItem()))));
+        bundle.putInt(CORRECT_ANSWER_SCORE,Integer.valueOf(String.valueOf(correctAnswersAdapter.getItemText(correctAnswers.getCurrentItem()))));
         intent.putExtras(bundle);
     }
 

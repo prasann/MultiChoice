@@ -12,7 +12,13 @@ import static java.util.Arrays.asList;
 
 public class BaseDB {
     private String query1 = "create table contest_info (_id integer primary key autoincrement," +
-            "test_name text not null, test_code text unique not null, test_count integer not null, answers text not null, open boolean);";
+            "test_name text not null, " +
+            "test_code text unique not null, " +
+            "test_count integer not null, " +
+            "answers text not null, " +
+            "wrong_score integer not null, " +
+            "correct_score integer not null, " +
+            "open boolean);";
     private String query2 = "create table results_info (_id integer primary key autoincrement," +
             "test_code text not null, sender text not null, answers text not null, received_time long not null,score integer not null, total_count integer not null);";
     private List<String> DATABASE_CREATE  =  asList(query1,query2);
