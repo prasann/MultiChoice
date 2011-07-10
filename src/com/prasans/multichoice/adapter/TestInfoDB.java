@@ -3,7 +3,6 @@ package com.prasans.multichoice.adapter;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
-import android.widget.Toast;
 
 public class TestInfoDB extends BaseDB {
 
@@ -50,11 +49,6 @@ public class TestInfoDB extends BaseDB {
         return returnCode;
     }
 
-    public boolean deleteTestEntry(long rowId) {
-        Toast.makeText(mCtx, "RowID:" + rowId, Toast.LENGTH_LONG).show();
-        return mDb.delete(DATABASE_TABLE, KEY_ROWID + "=" + rowId, null) > 0;
-    }
-
     public Cursor fetchAllTests() {
         this.open(mCtx);
         return mDb.query(DATABASE_TABLE,
@@ -70,4 +64,11 @@ public class TestInfoDB extends BaseDB {
 
     }
 
+    public void deleteTestEntry(String testCode) {
+        this.open(mCtx);
+        ResultsDB resultsDB = new ResultsDB(mCtx);
+        resultsDB.deleteAllEntriesFor(testCode);
+        mDb.delete(DATABASE_TABLE, TEST_CODE + "= '" + testCode + "'", null);
+        this.close();
+    }
 }

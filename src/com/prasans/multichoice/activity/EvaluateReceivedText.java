@@ -18,6 +18,7 @@ public class EvaluateReceivedText extends AsyncTask<Void, Void, Void> {
     private long receivedAt;
     private int wrongAnswerScore;
     private int correctAnswerScore;
+    private String answersFromDb;
 
     public EvaluateReceivedText(String phoneNumber, String message, long receivedAt, Context context) {
         this.phoneNumber = phoneNumber;
@@ -32,12 +33,18 @@ public class EvaluateReceivedText extends AsyncTask<Void, Void, Void> {
         String answers = extractAnswer(message);
         int score = processAnswer(testCode, answers);
         if (score != -1) {
-            new SendSMS().sendSms(phoneNumber, "Congrtas !! Your have scored " + score + "/" + answers.length() + " for the Test Code " + testCode);
+            int scoreOutOf = answers.length()*correctAnswerScore;
+			new SendSMS().sendSms(phoneNumber, 
+            		"Congrats !! Your have scored " + score + "/" + scoreOutOf +
+            		" Percentage : "+ ((float)((float)score/(float)scoreOutOf)*100) +
+            		" The actual answers for this test are : " + answersFromDb
+            		);
+			
         }
     }
 
     private int processAnswer(String testCode, String answers) {
-        String answersFromDb = fetchAnswerFromDb(testCode);
+        answersFromDb = fetchAnswerFromDb(testCode);
         if (answersFromDb != null) {
             int score = calculateScore(answers, answersFromDb);
             persistScoreInDb(testCode, score, answersFromDb.length());

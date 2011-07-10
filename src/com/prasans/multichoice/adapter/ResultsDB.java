@@ -47,10 +47,9 @@ public class ResultsDB extends BaseDB {
                 "test_code = '" + testCode + "'", null, null, null,RECEIVED_TIME );
     }
 
-    public Cursor fetchResultEntryFor(String testCode, String sender,long receivedAt) {
+    public void deleteAllEntriesFor(String testCode) {
         this.open(mCtx);
-        return mDb.query(DATABASE_TABLE,
-                new String[]{KEY_ROWID, TEST_CODE, SENDER, ANSWERS, RECEIVED_TIME, SCORE, TOTAL_COUNT},
-                "test_code = '" + testCode + "' and sender = '" + sender + "' and received_time = " + receivedAt, null, null, null, null);
+        mDb.delete(DATABASE_TABLE, TEST_CODE + "= '" + testCode + "'", null);
+        this.close();
     }
 }

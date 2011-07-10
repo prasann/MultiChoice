@@ -1,6 +1,7 @@
 package com.prasans.multichoice.adapter;
 
 import android.content.Context;
+import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +14,7 @@ import java.util.List;
 
 import static android.content.Context.LAYOUT_INFLATER_SERVICE;
 
-public class TestInfoListAdapter extends ArrayAdapter<TestInfo> {
+public class TestInfoListAdapter extends ArrayAdapter<TestInfo> implements View.OnCreateContextMenuListener{
 
 
     private List<TestInfo> items;
@@ -44,5 +45,9 @@ public class TestInfoListAdapter extends ArrayAdapter<TestInfo> {
             }
         }
         return view;
+    }
+
+    public void onCreateContextMenu(ContextMenu contextMenu, View view, ContextMenu.ContextMenuInfo contextMenuInfo) {
+        view.setBackgroundResource(R.drawable.darkaurora);
     }
 }
