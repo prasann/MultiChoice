@@ -72,8 +72,17 @@ public class ReportsScreen extends ListActivity {
         }
         Long id = testInfoAdapter.getItemId(info.position);
         TestInfo itemAtPosition = (TestInfo) listView.getItemAtPosition(id.intValue());
-        testInfoDB.deleteTestEntry(itemAtPosition.getTestCode());
+        if (item.getTitle().toString().contains("Delete")) {
+            deleteReportEntry(itemAtPosition);
+        }
         return true;
+    }
+
+    private void deleteReportEntry(TestInfo itemAtPosition) {
+        testInfoDB.deleteTestEntry(itemAtPosition.getTestCode());
+        Intent intent = getIntent();
+        finish();
+        startActivity(intent);
     }
 
 
