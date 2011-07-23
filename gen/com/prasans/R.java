@@ -41,7 +41,6 @@ public final class R {
         public static final int correctAnswers=0x7f080013;
         public static final int createBtn=0x7f080015;
         public static final int delete=0x7f080021;
-        public static final int edit=0x7f080022;
         public static final int imageView1=0x7f08001f;
         public static final int linearLayout1=0x7f080007;
         public static final int linearLayout2=0x7f08000e;

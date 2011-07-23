@@ -1,4 +1,4 @@
-package com.prasans.multichoice.activity;
+package com.prasans.multichoice.asynctask;
 
 import android.content.Context;
 import android.database.Cursor;

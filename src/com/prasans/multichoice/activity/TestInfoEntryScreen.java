@@ -31,13 +31,18 @@ public class TestInfoEntryScreen extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.create_test);
         Button button = (Button) findViewById(R.id.quesBtn);
-        button.setOnClickListener(buttonListener());
+        Bundle bundle = getIntent().getExtras();
+        button.setOnClickListener(buttonListener(isInEditMode(bundle)));
         testInfoDB = new TestInfoDB(this);
         seekBarForQuesCount();
         setWheelAdapters();
     }
 
-	private void seekBarForQuesCount() {
+    private boolean isInEditMode(Bundle bundle) {
+        return bundle !=null && bundle.containsKey(EDIT_MODE) && bundle.getBoolean(EDIT_MODE);
+    }
+
+    private void seekBarForQuesCount() {
 		SeekBar questSeekBar = (SeekBar) findViewById(R.id.questSeek);
         
         questSeekBar.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {	
@@ -65,14 +70,14 @@ public class TestInfoEntryScreen extends Activity {
 		correctAnswers.setCurrentItem(1);
 	}
 
-    private View.OnClickListener buttonListener() {
+    private View.OnClickListener buttonListener(final boolean editMode) {
         return new View.OnClickListener() {
             public void onClick(View view) {
                 TextView textView = (TextView)findViewById(R.id.questCount);
                 String quesCount = textView.getText().toString();
                 String testName = getValueFrom(R.id.testName);
                 String testCode = getValueFrom(R.id.testCode).toLowerCase();
-                if (checkForValidations(quesCount, testCode)) return;
+                if (hasErrorsInValidation(quesCount, testCode,editMode)) return;
                 Intent intent = new Intent(view.getContext(), EnterChoicesScreen.class);
                 createBundleToPassUpon(quesCount, testName, testCode, intent);
                 startActivityForResult(intent, RESULT_FIRST_USER);
@@ -80,12 +85,12 @@ public class TestInfoEntryScreen extends Activity {
         };
     }
 
-    private boolean checkForValidations(String quesCount, String testCode) {
+    private boolean hasErrorsInValidation(String quesCount, String testCode, boolean editMode) {
         if (checkForValidQuesCount(quesCount)) {
             displayAlert(this, "Error", "Invalid Question Count", null);
             return true;
         }
-        if (checkForTestCodeExistence(testCode)) {
+        if (!editMode && checkForTestCodeExistence(testCode)) {
             displayAlert(this, "Error", "Test Code already exists", null);
             return true;
         }
