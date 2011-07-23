@@ -20,11 +20,15 @@ public class SplashScreen extends Activity {
         aboutText.append("Also you can view the reports summary for your created tests/contests.");
         about.setText(aboutText);
 
+        parent.setOnClickListener(closeSplashScreen());
+        about.setOnClickListener(closeSplashScreen());
+    }
 
-        parent.setOnClickListener(new View.OnClickListener() {
+    private View.OnClickListener closeSplashScreen() {
+        return new View.OnClickListener() {
             public void onClick(View v) {
                 finish();
             }
-        });
+        };
     }
 }
