@@ -51,7 +51,6 @@ public class BaseDB {
         public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
             Log.w(DATABASE_NAME, "Upgrading database from version " + oldVersion + " to "
                     + newVersion + ", which will destroy all old data");
-            db.execSQL("DROP TABLE IF EXISTS " + DATABASE_TABLE);
         }
     }
 

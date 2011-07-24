@@ -12,6 +12,7 @@
         <activity android:name=".multichoice.activity.TestInfoEntryScreen"/>
         <activity android:name=".multichoice.activity.EnterAnswersScreen"/>
         <activity android:name=".multichoice.activity.ReportsScreen"/>
+        <activity android:name=".multichoice.activity.DeleteReportEntry"/>
         <activity android:name=".multichoice.activity.DisplayScoreScreen"/>
         <activity android:name=".multichoice.activity.EnterChoicesScreen"/>
         <activity android:name=".multichoice.activity.SplashScreen" android:theme="@android:style/Theme.Dialog"/>

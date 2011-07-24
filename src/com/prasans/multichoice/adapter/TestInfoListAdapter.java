@@ -19,11 +19,13 @@ public class TestInfoListAdapter extends ArrayAdapter<TestInfo> implements View.
 
     private List<TestInfo> items;
     private Context myContext;
+    private int rowView;
 
     public TestInfoListAdapter(Context context, int textViewResourceId, List<TestInfo> items) {
         super(context, textViewResourceId, items);
         this.items = items;
         this.myContext = context;
+        this.rowView = textViewResourceId;
     }
 
     @Override
@@ -31,7 +33,7 @@ public class TestInfoListAdapter extends ArrayAdapter<TestInfo> implements View.
         View view = convertView;
         if (view == null) {
             LayoutInflater vi = (LayoutInflater) myContext.getSystemService(LAYOUT_INFLATER_SERVICE);
-            view = vi.inflate(R.layout.row_test_info, null);
+            view = vi.inflate(rowView, null);
         }
         TestInfo testInfo = items.get(position);
         if (testInfo != null) {

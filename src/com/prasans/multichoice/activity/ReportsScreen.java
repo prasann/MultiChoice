@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.ContextMenu;
+import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -59,6 +60,21 @@ public class ReportsScreen extends ListActivity {
         menu.setHeaderTitle("Actions");
         v.setBackgroundResource(R.drawable.darkaurora);
         inflater.inflate(R.menu.context_menu, menu);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        menu.add("Delete");
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getTitle().toString().contains("Delete")) {
+            Intent intent = new Intent(this, DeleteReportEntry.class);
+            startActivityForResult(intent, RESULT_FIRST_USER);
+        }
+        return true;
     }
 
     @Override

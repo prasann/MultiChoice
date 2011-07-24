@@ -39,45 +39,45 @@ public class TestInfoEntryScreen extends Activity {
     }
 
     private boolean isInEditMode(Bundle bundle) {
-        return bundle !=null && bundle.containsKey(EDIT_MODE) && bundle.getBoolean(EDIT_MODE);
+        return bundle != null && bundle.containsKey(EDIT_MODE) && bundle.getBoolean(EDIT_MODE);
     }
 
     private void seekBarForQuesCount() {
-		SeekBar questSeekBar = (SeekBar) findViewById(R.id.questSeek);
-        
-        questSeekBar.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {	
-			public void onStopTrackingTouch(SeekBar arg0) {
-			}
-			
-			public void onStartTrackingTouch(SeekBar arg0) {
-			}
-			
-			public void onProgressChanged(SeekBar arg0, int progress, boolean arg2) {
-				((TextView) TestInfoEntryScreen.this.findViewById(R.id.questCount)).setText(String.valueOf(progress+1));
-			}
-		});
-	}
+        SeekBar questSeekBar = (SeekBar) findViewById(R.id.questSeek);
 
-	private void setWheelAdapters() {
-		wrongAnswers = (WheelView) findViewById(R.id.wrongAnswers);
-        wrongAnswersAdapter = new NumericWheelAdapter(this,-5,0);
-		wrongAnswers.setViewAdapter(wrongAnswersAdapter);
-		wrongAnswers.setCurrentItem(5);
-		
-		correctAnswers = (WheelView) findViewById(R.id.correctAnswers);
-		correctAnswersAdapter = new NumericWheelAdapter(this,0,5);
-		correctAnswers.setViewAdapter(correctAnswersAdapter);
-		correctAnswers.setCurrentItem(1);
-	}
+        questSeekBar.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
+            public void onStopTrackingTouch(SeekBar arg0) {
+            }
+
+            public void onStartTrackingTouch(SeekBar arg0) {
+            }
+
+            public void onProgressChanged(SeekBar arg0, int progress, boolean arg2) {
+                ((TextView) TestInfoEntryScreen.this.findViewById(R.id.questCount)).setText(String.valueOf(progress + 1));
+            }
+        });
+    }
+
+    private void setWheelAdapters() {
+        wrongAnswers = (WheelView) findViewById(R.id.wrongAnswers);
+        wrongAnswersAdapter = new NumericWheelAdapter(this, -5, 0);
+        wrongAnswers.setViewAdapter(wrongAnswersAdapter);
+        wrongAnswers.setCurrentItem(5);
+
+        correctAnswers = (WheelView) findViewById(R.id.correctAnswers);
+        correctAnswersAdapter = new NumericWheelAdapter(this, 0, 5);
+        correctAnswers.setViewAdapter(correctAnswersAdapter);
+        correctAnswers.setCurrentItem(1);
+    }
 
     private View.OnClickListener buttonListener(final boolean editMode) {
         return new View.OnClickListener() {
             public void onClick(View view) {
-                TextView textView = (TextView)findViewById(R.id.questCount);
+                TextView textView = (TextView) findViewById(R.id.questCount);
                 String quesCount = textView.getText().toString();
                 String testName = getValueFrom(R.id.testName);
                 String testCode = getValueFrom(R.id.testCode).toLowerCase();
-                if (hasErrorsInValidation(quesCount, testCode,editMode)) return;
+                if (hasErrorsInValidation(quesCount, testCode, editMode)) return;
                 Intent intent = new Intent(view.getContext(), EnterChoicesScreen.class);
                 createBundleToPassUpon(quesCount, testName, testCode, intent);
                 startActivityForResult(intent, RESULT_FIRST_USER);
@@ -102,8 +102,8 @@ public class TestInfoEntryScreen extends Activity {
         bundle.putString(TEST_NAME, testName);
         bundle.putInt(COUNT, parseInt(quesCount));
         bundle.putString(TEST_CODE, testCode);
-        bundle.putInt(WRONG_ANSWER_SCORE,Integer.valueOf(String.valueOf(wrongAnswersAdapter.getItemText(wrongAnswers.getCurrentItem()))));
-        bundle.putInt(CORRECT_ANSWER_SCORE,Integer.valueOf(String.valueOf(correctAnswersAdapter.getItemText(correctAnswers.getCurrentItem()))));
+        bundle.putInt(WRONG_ANSWER_SCORE, Integer.valueOf(String.valueOf(wrongAnswersAdapter.getItemText(wrongAnswers.getCurrentItem()))));
+        bundle.putInt(CORRECT_ANSWER_SCORE, Integer.valueOf(String.valueOf(correctAnswersAdapter.getItemText(correctAnswers.getCurrentItem()))));
         intent.putExtras(bundle);
     }
 
@@ -112,7 +112,7 @@ public class TestInfoEntryScreen extends Activity {
             return true;
         }
         Cursor cursor = testInfoDB.fetchAllTests();
-        for(cursor.moveToFirst();!cursor.isAfterLast();cursor.moveToNext()){
+        for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
             if (testCode.equals(cursor.getString(2))) {
                 return true;
             }
