@@ -258,6 +258,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/multichoice.iml" filepath="$PROJECT_DIR$/multichoice.iml" />
+      <module fileurl="file://D:/android-wheel/wheel/wheel.iml" filepath="D:/android-wheel/wheel/wheel.iml" />
     </modules>
   </component>
   <component name="ProjectResources">
@@ -271,6 +272,7 @@
   </component>
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="D:/android-wheel/wheel" vcs="svn" />
   </component>
   <component name="VssConfiguration">
     <option name="CLIENT_PATH" value="" />

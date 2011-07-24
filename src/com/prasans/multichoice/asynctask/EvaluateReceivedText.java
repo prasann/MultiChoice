@@ -8,7 +8,11 @@ import com.prasans.multichoice.adapter.ResultsDB;
 import com.prasans.multichoice.adapter.TestInfoDB;
 import com.prasans.multichoice.service.SendSMS;
 
-import static com.prasans.multichoice.adapter.TestInfoDB.*;
+import java.text.DecimalFormat;
+
+import static com.prasans.multichoice.adapter.TestInfoDB.ANSWERS;
+import static com.prasans.multichoice.adapter.TestInfoDB.CORRECT_ANSWERS_SCORE;
+import static com.prasans.multichoice.adapter.TestInfoDB.WRONG_ANSWERS_SCORE;
 
 public class EvaluateReceivedText extends AsyncTask<Void, Void, Void> {
     private TestInfoDB testInfoDB;
@@ -33,14 +37,25 @@ public class EvaluateReceivedText extends AsyncTask<Void, Void, Void> {
         String answers = extractAnswer(message);
         int score = processAnswer(testCode, answers);
         if (score != -1) {
-            int scoreOutOf = answers.length()*correctAnswerScore;
-			new SendSMS().sendSms(phoneNumber, 
-            		"Congrats !! Your have scored " + score + "/" + scoreOutOf +
-            		" Percentage : "+ ((float)((float)score/(float)scoreOutOf)*100) +
-            		" The actual answers for this test are : " + answersFromDb
-            		);
-			
+            int scoreOutOf = answers.length() * correctAnswerScore;
+            String smsContent = smsContent(score, scoreOutOf) +
+                    " The actual answers for this test are : " + answersFromDb;
+            new SendSMS().sendSms(phoneNumber, smsContent);
         }
+    }
+
+    private String smsContent(float score, float scoreOutOf) {
+        StringBuffer stringBuffer = new StringBuffer();
+        DecimalFormat decimalFormat = new DecimalFormat("#0.00");
+        Float percentage = (score / scoreOutOf) * 100;
+        if (percentage > 40.00) {
+            stringBuffer.append("Congrats !!");
+        }
+        stringBuffer.append("Your have scored ")
+                .append((int)score).append("/").append((int)scoreOutOf)
+                .append(" Percentage : ")
+                .append(decimalFormat.format(percentage)).append("%");
+        return stringBuffer.toString();
     }
 
     private int processAnswer(String testCode, String answers) {
@@ -54,7 +69,7 @@ public class EvaluateReceivedText extends AsyncTask<Void, Void, Void> {
     }
 
     private void persistScoreInDb(String testCode, int score, int totalCount) {
-        resultsDB.createTestEntry(testCode, phoneNumber, message, receivedAt, score, totalCount*correctAnswerScore);
+        resultsDB.createTestEntry(testCode, phoneNumber, message, receivedAt, score, totalCount * correctAnswerScore);
     }
 
     private int calculateScore(String userAnswer, String answersFromDb) {
@@ -63,13 +78,13 @@ public class EvaluateReceivedText extends AsyncTask<Void, Void, Void> {
         answersFromDb = answersFromDb.substring(0, shortAnswer.length());
         int score = 0;
         for (int i = 0; i < shortAnswer.length(); i++) {
-        	if(userAnswer.charAt(i) == 'X' ||userAnswer.charAt(i) == 'x'){
-        		continue;
-        	}else if (userAnswer.charAt(i) == answersFromDb.charAt(i)){
-        		score = score+correctAnswerScore;
-        	}else{
-        		score = score + wrongAnswerScore;
-        	}
+            if (userAnswer.charAt(i) == 'X' || userAnswer.charAt(i) == 'x') {
+                continue;
+            } else if (userAnswer.charAt(i) == answersFromDb.charAt(i)) {
+                score = score + correctAnswerScore;
+            } else {
+                score = score + wrongAnswerScore;
+            }
         }
         return score;
     }
